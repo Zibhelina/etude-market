@@ -1,0 +1,455 @@
+{
+ "etude": "market/1",
+ "generated": "2026-10-25T10:50:00.682Z",
+ "repo": "Zibhelina/etude-market",
+ "entries": [
+  {
+   "id": "piano-chord",
+   "kind": "type",
+   "name": "Build the chord",
+   "description": "Play a chord on a two-octave piano. A new root and quality every review; any voicing or inversion counts, graded by pitch classes.",
+   "author": "Zibhelina",
+   "tags": [
+    "music",
+    "piano"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/types/piano-chord.json",
+   "bytes": 23357,
+   "summary": {
+    "types": [
+     {
+      "id": "chord",
+      "name": "Build the chord",
+      "description": "Play a chord on a two-octave piano. A new root and quality every review; any voicing or inversion counts, graded by pitch classes.",
+      "grader": "script",
+      "fields": [
+       "prompt",
+       "qualities",
+       "explanation"
+      ]
+     }
+    ],
+    "items": 1,
+    "samples": [
+     "Build this triad on the keyboard."
+    ]
+   }
+  },
+  {
+   "id": "etude-showcase",
+   "kind": "deck",
+   "name": "Etude Showcase",
+   "description": "A tour of what Etude cards can be: one card for each of 27 card types (chess, chords, kanji drawing, regex, typing tests...). It's a Watch deck: press Show an answer to see each one answered and graded.",
+   "author": "Zibhelina",
+   "tags": [
+    "tour",
+    "demo"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/decks/etude-showcase.json",
+   "bytes": 363775,
+   "summary": {
+    "decks": [
+     "Etude Showcase",
+     "Etude Showcase::1 Recall",
+     "Etude Showcase::2 Calculate",
+     "Etude Showcase::3 Arrange",
+     "Etude Showcase::4 Code",
+     "Etude Showcase::5 Play and listen",
+     "Etude Showcase::6 Draw and write"
+    ],
+    "items": 27,
+    "cardTypes": {
+     "basic": 1,
+     "typed": 1,
+     "mcq": 1,
+     "cloze": 1,
+     "match": 1,
+     "numeric": 1,
+     "math": 1,
+     "estimate": 1,
+     "balance": 1,
+     "unit-circle": 1,
+     "plot": 1,
+     "order": 1,
+     "timeline": 1,
+     "graph-walk": 1,
+     "code": 1,
+     "regex": 1,
+     "bug-hunt": 1,
+     "bits": 1,
+     "chess": 1,
+     "chord": 1,
+     "staff": 1,
+     "interval": 1,
+     "color": 1,
+     "sprint": 1,
+     "typing": 1,
+     "free": 1,
+     "draw": 1
+    },
+    "types": [
+     {
+      "id": "balance",
+      "name": "Balance the equation"
+     },
+     {
+      "id": "bits",
+      "name": "Flip the bits"
+     },
+     {
+      "id": "bug-hunt",
+      "name": "Find the bug"
+     },
+     {
+      "id": "chess",
+      "name": "Mate in one"
+     },
+     {
+      "id": "chord",
+      "name": "Build the chord"
+     },
+     {
+      "id": "color",
+      "name": "Make this color"
+     },
+     {
+      "id": "estimate",
+      "name": "Estimate it"
+     },
+     {
+      "id": "graph-walk",
+      "name": "Visit the nodes"
+     },
+     {
+      "id": "interval",
+      "name": "Name the interval"
+     },
+     {
+      "id": "plot",
+      "name": "Mark the points"
+     },
+     {
+      "id": "regex",
+      "name": "Write the regex"
+     },
+     {
+      "id": "sprint",
+      "name": "Beat the clock"
+     },
+     {
+      "id": "staff",
+      "name": "Read the note"
+     },
+     {
+      "id": "timeline",
+      "name": "Place it in time"
+     },
+     {
+      "id": "typing",
+      "name": "Type fast"
+     },
+     {
+      "id": "unit-circle",
+      "name": "Unit circle"
+     }
+    ],
+    "watch": true,
+    "samples": [
+     "Why is the sky blue?",
+     "What is the capital of Australia?",
+     "Which planet has the shortest day, one full turn on its axis?"
+    ]
+   }
+  },
+  {
+   "id": "manuscript",
+   "kind": "theme",
+   "name": "Manuscript",
+   "description": "Cream paper, ink-blue text and a red-pen accent, set in Computer Modern. For long reading sessions and math-heavy decks.",
+   "author": "Zibhelina",
+   "tags": [
+    "light",
+    "serif",
+    "paper"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/themes/manuscript.json",
+   "bytes": 2611,
+   "summary": {
+    "theme": {
+     "id": "manuscript",
+     "name": "Manuscript",
+     "scheme": "light",
+     "vars": {
+      "--background": "oklch(0.965 0.02 85)",
+      "--foreground": "oklch(0.22 0.02 260)",
+      "--card": "oklch(0.985 0.012 85)",
+      "--popover": "oklch(0.985 0.012 85)",
+      "--primary": "oklch(0.28 0.06 260)",
+      "--primary-foreground": "oklch(0.97 0.015 85)",
+      "--secondary": "oklch(0.92 0.022 80)",
+      "--muted": "oklch(0.925 0.02 80)",
+      "--muted-foreground": "oklch(0.45 0.02 260)",
+      "--accent": "oklch(0.905 0.025 80)",
+      "--destructive": "oklch(0.54 0.17 30)",
+      "--border": "oklch(0.3 0.03 260 / 16%)",
+      "--input": "oklch(0.35 0.04 60 / 22%)",
+      "--ring": "oklch(0.55 0.04 65)",
+      "--chart-1": "oklch(0.56 0.14 15)",
+      "--chart-2": "oklch(0.54 0.09 235)",
+      "--chart-3": "oklch(0.66 0.12 75)",
+      "--chart-4": "oklch(0.55 0.11 145)",
+      "--chart-5": "oklch(0.62 0.03 70)",
+      "--sidebar": "oklch(0.94 0.024 85)",
+      "--sidebar-accent": "oklch(0.895 0.027 80)",
+      "--sidebar-border": "oklch(0.35 0.04 60 / 11%)",
+      "--highlight": "oklch(0.55 0.19 25)",
+      "--success": "oklch(0.52 0.12 145)",
+      "--warning": "oklch(0.6 0.13 70)",
+      "--danger": "oklch(0.54 0.17 30)",
+      "--again": "oklch(0.54 0.17 30)",
+      "--hard": "oklch(0.6 0.12 62)",
+      "--good": "oklch(0.52 0.12 145)",
+      "--easy": "oklch(0.52 0.1 240)",
+      "--new": "oklch(0.52 0.1 240)",
+      "--learn": "oklch(0.57 0.14 42)",
+      "--review": "oklch(0.52 0.12 145)",
+      "--radius": "0.625rem",
+      "--card-foreground": "oklch(0.22 0.02 260)",
+      "--popover-foreground": "oklch(0.27 0.025 60)",
+      "--secondary-foreground": "oklch(0.27 0.025 60)",
+      "--accent-foreground": "oklch(0.27 0.025 60)",
+      "--sidebar-foreground": "oklch(0.27 0.025 60)",
+      "--sidebar-primary": "oklch(0.32 0.03 60)",
+      "--sidebar-primary-foreground": "oklch(0.97 0.015 85)",
+      "--sidebar-accent-foreground": "oklch(0.27 0.025 60)",
+      "--sidebar-ring": "oklch(0.55 0.04 65)",
+      "--font-sans": "\"Latin Modern Roman\", \"CMU Serif\", Georgia, serif",
+      "--font-mono": "\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", monospace"
+     },
+     "base": "paper"
+    }
+   }
+  },
+  {
+   "id": "chess-move",
+   "kind": "type",
+   "name": "Mate in one",
+   "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
+   "author": "Zibhelina",
+   "tags": [
+    "chess",
+    "games"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/types/chess-move.json",
+   "bytes": 27722,
+   "summary": {
+    "types": [
+     {
+      "id": "chess",
+      "name": "Mate in one",
+      "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
+      "grader": "script",
+      "fields": [
+       "prompt",
+       "fen",
+       "answers",
+       "san",
+       "explanation"
+      ]
+     }
+    ],
+    "items": 1,
+    "samples": [
+     "White to play and mate in one."
+    ]
+   }
+  },
+  {
+   "id": "morse-code-letters",
+   "kind": "deck",
+   "name": "Morse code",
+   "description": "Letters in dots and dashes, with a memory hook for each. Uses the Morse code card type, which comes along.",
+   "author": "Zibhelina",
+   "tags": [
+    "morse",
+    "radio"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/decks/morse-code-letters.json",
+   "bytes": 8782,
+   "summary": {
+    "decks": [
+     "Morse code",
+     "Morse code::Letters"
+    ],
+    "items": 3,
+    "cardTypes": {
+     "morse": 3
+    },
+    "types": [
+     {
+      "id": "morse",
+      "name": "Morse code"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "C",
+     "S",
+     "O"
+    ]
+   }
+  },
+  {
+   "id": "morse-code",
+   "kind": "type",
+   "name": "Morse code",
+   "description": "See a letter, tap it out in dots and dashes; graded by script, then the right code blinks back.",
+   "author": "Zibhelina",
+   "tags": [
+    "morse"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/types/morse-code.json",
+   "bytes": 8659,
+   "summary": {
+    "types": [
+     {
+      "id": "morse",
+      "name": "Morse code",
+      "description": "See a letter, tap it out in dots and dashes; checked by script, then the right code blinks back.",
+      "grader": "script",
+      "fields": [
+       "letter",
+       "code",
+       "mnemonic"
+      ]
+     }
+    ],
+    "items": 3,
+    "samples": [
+     "C",
+     "S",
+     "O"
+    ]
+   }
+  },
+  {
+   "id": "nocturne",
+   "kind": "theme",
+   "name": "Nocturne",
+   "description": "Deep indigo night with a soft violet accent. Easier on the eyes than pure black at 2am.",
+   "author": "Zibhelina",
+   "tags": [
+    "dark",
+    "purple"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/themes/nocturne.json",
+   "bytes": 2472,
+   "summary": {
+    "theme": {
+     "id": "nocturne",
+     "name": "Nocturne",
+     "scheme": "dark",
+     "vars": {
+      "--background": "oklch(0.17 0.035 270)",
+      "--foreground": "oklch(0.97 0 0)",
+      "--card": "oklch(0.22 0.04 270)",
+      "--popover": "oklch(0.22 0.04 270)",
+      "--primary": "oklch(0.96 0 0)",
+      "--primary-foreground": "oklch(0.18 0 0)",
+      "--secondary": "oklch(0.26 0.04 270)",
+      "--muted": "oklch(0.25 0.035 270)",
+      "--muted-foreground": "oklch(0.72 0.03 270)",
+      "--accent": "oklch(0.28 0.045 270)",
+      "--destructive": "oklch(0.68 0.19 22)",
+      "--border": "oklch(0.85 0.05 280 / 14%)",
+      "--input": "oklch(1 0 0 / 13%)",
+      "--ring": "oklch(0.6 0 0)",
+      "--chart-1": "oklch(0.78 0.13 300)",
+      "--chart-2": "oklch(0.72 0.12 250)",
+      "--chart-3": "oklch(0.8 0.14 85)",
+      "--chart-4": "oklch(0.75 0.15 150)",
+      "--chart-5": "oklch(0.6 0 0)",
+      "--sidebar": "oklch(0.145 0.03 270)",
+      "--sidebar-accent": "oklch(0.24 0.04 270)",
+      "--sidebar-border": "oklch(1 0 0 / 8%)",
+      "--highlight": "oklch(0.78 0.13 300)",
+      "--success": "oklch(0.78 0.16 150)",
+      "--warning": "oklch(0.84 0.15 85)",
+      "--danger": "oklch(0.7 0.18 22)",
+      "--again": "oklch(0.7 0.18 22)",
+      "--hard": "oklch(0.82 0.13 70)",
+      "--good": "oklch(0.78 0.15 150)",
+      "--easy": "oklch(0.74 0.12 240)",
+      "--new": "oklch(0.74 0.12 240)",
+      "--learn": "oklch(0.72 0.17 30)",
+      "--review": "oklch(0.78 0.15 150)",
+      "--card-foreground": "oklch(0.97 0 0)",
+      "--popover-foreground": "oklch(0.97 0 0)",
+      "--secondary-foreground": "oklch(0.97 0 0)",
+      "--accent-foreground": "oklch(0.97 0 0)",
+      "--sidebar-foreground": "oklch(0.97 0 0)",
+      "--sidebar-primary": "oklch(0.96 0 0)",
+      "--sidebar-primary-foreground": "oklch(0.18 0 0)",
+      "--sidebar-accent-foreground": "oklch(0.97 0 0)",
+      "--sidebar-ring": "oklch(0.6 0 0)",
+      "--radius": "0.75rem",
+      "--font-sans": "\"Inter\", ui-sans-serif, system-ui, sans-serif",
+      "--font-mono": "\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", monospace"
+     },
+     "base": "midnight"
+    }
+   }
+  },
+  {
+   "id": "typing-test",
+   "kind": "type",
+   "name": "Type fast",
+   "description": "A Monkeytype-style typing test: common words, your own word list or a passage, by word count or timed. Graded by WPM against a target.",
+   "author": "Zibhelina",
+   "tags": [
+    "typing",
+    "speed"
+   ],
+   "version": "1",
+   "updated": "2026-10-25",
+   "path": "entries/types/typing-test.json",
+   "bytes": 35361,
+   "summary": {
+    "types": [
+     {
+      "id": "typing",
+      "name": "Type fast",
+      "description": "A typing test in the style of Monkeytype: common words, your own word list or a passage, by word count or against the clock. The clock starts on the first key and the result is your WPM. Score = WPM ÷ target.",
+      "grader": "script",
+      "fields": [
+       "note",
+       "text",
+       "wordlist",
+       "count",
+       "seconds",
+       "target"
+      ]
+     }
+    ],
+    "items": 1,
+    "samples": [
+     "25 of the most common English words. The clock starts on your first key."
+    ]
+   }
+  }
+ ]
+}
