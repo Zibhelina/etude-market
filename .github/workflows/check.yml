@@ -1,0 +1,21 @@
+name: Check entries
+on:
+  pull_request:
+    paths: ["entries/**"]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Zibhelina/etude
+          path: .etude
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci --omit=dev --ignore-scripts
+        working-directory: .etude
+      - name: Validate every entry (decks and types are dry-run imported)
+        run: node .etude/src/cli/main.ts market index . --check --repo "$GITHUB_REPOSITORY"

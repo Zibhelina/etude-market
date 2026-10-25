@@ -1,0 +1,112 @@
+{
+  "etudeMarket": 1,
+  "kind": "type",
+  "id": "morse-code",
+  "name": "Morse code",
+  "description": "See a letter, tap it out in dots and dashes; graded by script, then the right code blinks back.",
+  "author": "Zibhelina",
+  "tags": [
+    "morse"
+  ],
+  "version": "1",
+  "updated": "2026-10-25",
+  "content": {
+    "etude": "pack/1",
+    "name": "Morse code",
+    "types": [
+      {
+        "id": "morse",
+        "name": "Morse code",
+        "description": "See a letter, tap it out in dots and dashes; checked by script, then the right code blinks back.",
+        "fields": [
+          {
+            "name": "letter",
+            "kind": "text",
+            "required": true,
+            "description": "The letter or digit to send."
+          },
+          {
+            "name": "code",
+            "kind": "text",
+            "required": true,
+            "private": true,
+            "description": "Its Morse code, as . and -"
+          },
+          {
+            "name": "mnemonic",
+            "kind": "markdown",
+            "private": true,
+            "description": "A memory hook, shown after answering."
+          }
+        ],
+        "prepare": "// The card only sees the letter; the code and mnemonic stay in the key until grading.\nreturn {\n  view: { letter: fields.letter },\n  key: { code: fields.code, mnemonic: fields.mnemonic ?? \"\" },\n};\n",
+        "template": {
+          "html": "<div class=\"mo-eyebrow\">Tap it out in Morse</div>\n<div class=\"mo-letter\">{{letter}}</div>\n<div class=\"mo-tape mo-mine\" aria-live=\"polite\"></div>\n<div class=\"mo-pad only-answer\">\n  <button type=\"button\" class=\"mo-key\" data-s=\".\"><span class=\"mo-sym dot\"></span><small>dot <kbd>.</kbd></small></button>\n  <button type=\"button\" class=\"mo-key\" data-s=\"-\"><span class=\"mo-sym dash\"></span><small>dash <kbd>-</kbd></small></button>\n  <button type=\"button\" class=\"mo-key mo-del\" data-s=\"del\" aria-label=\"Delete\">⌫</button>\n</div>\n<template data-on=\"result\">\n  <div class=\"e-reveal mo-result\">\n    <div class=\"mo-lamp\"></div>\n    <div class=\"e-section-title\">{{letter}} in Morse</div>\n    <div class=\"mo-tape mo-correct\"></div>\n    {{#mnemonic}}<div class=\"prose e-muted\">{{md:mnemonic}}</div>{{/mnemonic}}\n  </div>\n</template>\n",
+          "css": ".mo-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--highlight); margin-bottom: -0.75rem; }\n.mo-letter { font: 600 5.5rem/1 var(--font-mono); text-align: center; margin: 0.5rem 0 0; }\n.mo-tape { display: flex; align-items: center; justify-content: center; gap: 0.7rem; min-height: 2.6rem; }\n.mo-empty { color: var(--muted-foreground); font-size: 0.9rem; }\n.mo-sym { --c: var(--highlight); display: inline-block; height: 1.1rem; border-radius: 999px; background: var(--c);\n  box-shadow: 0 0 6px color-mix(in oklab, var(--c) 80%, transparent), 0 0 18px color-mix(in oklab, var(--c) 45%, transparent); transition: transform 0.12s, filter 0.12s; }\n.mo-sym.dot { width: 1.1rem; }\n.mo-sym.dash { width: 3.3rem; }\n.mo-sym.new { animation: mo-pop 0.28s cubic-bezier(.2, 1.6, .4, 1); }\n.mo-sym.is-ok { --c: var(--success); }\n.mo-sym.is-bad { --c: var(--danger); }\n.mo-sym.is-missed { --c: var(--muted-foreground); opacity: 0.5; box-shadow: none; }\n.mo-sym.lit { filter: brightness(1.6); transform: scale(1.18); }\n@keyframes mo-pop { from { transform: scale(0.2); filter: brightness(2.2); } }\n.mo-pad { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.6rem; max-width: 26rem; width: 100%; margin: 0 auto; }\n.mo-key { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.55rem; height: 5.5rem; border-radius: var(--radius);\n  border: 1px solid var(--border); background: color-mix(in oklab, var(--foreground) 4%, transparent); color: var(--muted-foreground); cursor: pointer; transition: background 0.1s, transform 0.08s; }\n.mo-key:hover { background: color-mix(in oklab, var(--foreground) 9%, transparent); }\n.mo-key:active, .mo-key.down { transform: scale(0.96); background: color-mix(in oklab, var(--highlight) 18%, transparent); }\n.mo-key small { font-size: 0.75rem; }\n.mo-del { width: 4rem; font-size: 1.3rem; }\n.mo-result { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; text-align: center; }\n.mo-result .e-section-title { margin: 0.3rem 0 -0.2rem; }\n.mo-lamp { flex: none; width: 3rem; height: 3rem; border-radius: 50%; background: color-mix(in oklab, var(--foreground) 10%, transparent); transition: background 0.05s, box-shadow 0.05s; }\n.mo-lamp.on { background: #ffe9a8; box-shadow: 0 0 14px #ffd36a, 0 0 42px color-mix(in oklab, #ffb02e 70%, transparent); }\n",
+          "js": "const mine = etude.$(\".mo-mine\");\nlet seq = typeof etude.answer === \"string\" ? etude.answer : \"\";\nconst sym = (s, cls = \"\") => `<span class=\"mo-sym ${s === \".\" ? \"dot\" : \"dash\"} ${cls}\"></span>`;\n\nconst draw = (fresh) => {\n  mine.innerHTML = seq ? [...seq].map((s, i) => sym(s, fresh && i === seq.length - 1 ? \"new\" : \"\")).join(\"\") : `<span class=\"mo-empty\">Tap dot and dash</span>`;\n  etude.setReady(seq.length > 0);\n};\nconst press = (s) => {\n  if (etude.mode !== \"answer\") return;\n  seq = s === \"del\" ? seq.slice(0, -1) : (seq + s).slice(0, 7);\n  draw(s !== \"del\");\n};\netude.$$(\".mo-key\").forEach((b) => b.addEventListener(\"click\", () => press(b.dataset.s)));\nwindow.addEventListener(\"keydown\", (e) => {\n  const s = { \".\": \".\", \"-\": \"-\", j: \".\", k: \"-\", Backspace: \"del\" }[e.key];\n  if (!s || etude.mode !== \"answer\") return;\n  e.preventDefault();\n  press(s);\n  const b = etude.$(`.mo-key[data-s=\"${s}\"]`);\n  b?.classList.add(\"down\");\n  setTimeout(() => b?.classList.remove(\"down\"), 120);\n});\ndraw(false);\netude.getAnswer(() => seq);\n\netude.onResult(({ key, answer }) => {\n  const sent = String(answer ?? \"\");\n  const code = key.code;\n  // Your taps, marked symbol by symbol; anything you left out shows faded.\n  mine.innerHTML = [...sent].map((s, i) => sym(s, s === code[i] ? \"is-ok\" : \"is-bad\")).join(\"\") +\n    [...code.slice(sent.length)].map((s) => sym(s, \"is-missed\")).join(\"\");\n  const right = etude.$(\".mo-correct\");\n  right.innerHTML = [...code].map((s) => sym(s)).join(\"\");\n  // Blink the right code on the lamp at Morse timing: dot 1 unit, dash 3, gaps 1, then a pause.\n  const lamp = etude.$(\".mo-lamp\");\n  const parts = etude.$$(\".mo-correct .mo-sym\");\n  const U = 170;\n  const loop = (i) => {\n    if (!lamp.isConnected) return;\n    if (i === code.length) return setTimeout(() => loop(0), 6 * U);\n    lamp.classList.add(\"on\"); parts[i].classList.add(\"lit\");\n    setTimeout(() => {\n      lamp.classList.remove(\"on\"); parts[i].classList.remove(\"lit\");\n      setTimeout(() => loop(i + 1), U);\n    }, code[i] === \".\" ? U : 3 * U);\n  };\n  setTimeout(() => loop(0), 400);\n});\n"
+        },
+        "grader": {
+          "kind": "script",
+          "code": "// answer is the tapped sequence, e.g. \"-.-.\"\nconst sent = String(answer ?? \"\").replace(/[^.-]/g, \"\");\nconst ok = sent === key.code;\nreturn {\n  score: ok ? 1 : 0,\n  details: { sent },\n  feedback: ok ? undefined : `You sent ${sent || \"nothing\"}, but ${view.letter} is ${key.code}`,\n};\n"
+        }
+      }
+    ],
+    "decks": [
+      {
+        "name": "Morse code",
+        "description": ""
+      },
+      {
+        "name": "Morse code::Letters",
+        "description": "Letters in dots and dashes."
+      }
+    ],
+    "items": [
+      {
+        "id": "morse.c",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse"
+        ],
+        "fields": {
+          "letter": "C",
+          "code": "-.-.",
+          "mnemonic": "**CO**-ca **CO**-la: long short long short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.s",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse"
+        ],
+        "fields": {
+          "letter": "S",
+          "code": "...",
+          "mnemonic": "**S**ss: three quick hisses. Half of SOS."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.o",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse"
+        ],
+        "fields": {
+          "letter": "O",
+          "code": "---",
+          "mnemonic": "**O**h-oh-oh: three long tones. The other half of SOS."
+        },
+        "source": "",
+        "notes": ""
+      }
+    ]
+  }
+}
