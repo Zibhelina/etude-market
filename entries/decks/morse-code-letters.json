@@ -63,7 +63,8 @@
         "grader": {
           "kind": "script",
           "code": "// answer is the tapped sequence, e.g. \"-.-.\"\nconst sent = String(answer ?? \"\").replace(/[^.-]/g, \"\");\nconst ok = sent === key.code;\nreturn {\n  score: ok ? 1 : 0,\n  details: { sent },\n  feedback: ok ? undefined : `You sent ${sent || \"nothing\"}, but ${view.letter} is ${key.code}`,\n};\n"
-        }
+        },
+        "demo": "// An example answer for watch mode: the right code.\nreturn String(key.code ?? \"\");\n"
       }
     ],
     "items": [
