@@ -3,13 +3,14 @@
   "kind": "deck",
   "id": "morse-code-letters",
   "name": "Morse code",
-  "description": "Letters in dots and dashes, with a memory hook for each. Uses the Morse code card type, which comes along.",
+  "description": "Every character with a Morse code: A to Z, 0 to 9, punctuation, prosigns like SOS and SK, and accented letters, 94 cards with a memory hook each. Uses the Morse code card type, which comes along.",
   "author": "Zibhelina",
   "tags": [
     "morse",
-    "radio"
+    "radio",
+    "ham radio"
   ],
-  "version": "1",
+  "version": "2",
   "updated": "2026-10-25",
   "content": {
     "etude": "pack/1",
@@ -18,12 +19,32 @@
     "decks": [
       {
         "name": "Morse code",
-        "description": "",
+        "description": "International Morse code, from Wikipedia's table of ITU-R M.1677-1 and the common extensions.",
         "instructions": ""
       },
       {
         "name": "Morse code::Letters",
-        "description": "Letters in dots and dashes.",
+        "description": "A to Z.",
+        "instructions": ""
+      },
+      {
+        "name": "Morse code::Numbers",
+        "description": "0 to 9.",
+        "instructions": ""
+      },
+      {
+        "name": "Morse code::Punctuation",
+        "description": "The ITU signs, plus ! & ; _ and the dollar sign, which aren't in the standard.",
+        "instructions": ""
+      },
+      {
+        "name": "Morse code::Prosigns",
+        "description": "Procedure signals: letters run together with no gap, drawn with a bar on top.",
+        "instructions": ""
+      },
+      {
+        "name": "Morse code::Accented letters",
+        "description": "Letters with diacritics. Several share one code.",
         "instructions": ""
       }
     ],
@@ -32,13 +53,23 @@
       {
         "id": "morse",
         "name": "Morse code",
-        "description": "See a letter, tap it out in dots and dashes; checked by script, then the right code blinks back.",
+        "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
         "fields": [
           {
             "name": "letter",
             "kind": "text",
             "required": true,
-            "description": "The letter or digit to send."
+            "description": "The letter, digit, sign or prosign to send."
+          },
+          {
+            "name": "name",
+            "kind": "text",
+            "description": "What it's called, shown under it (Full stop, End of contact). Optional."
+          },
+          {
+            "name": "prosign",
+            "kind": "boolean",
+            "description": "Draw it with a bar on top: a prosign is sent as one run, with no gap between its letters."
           },
           {
             "name": "code",
@@ -54,11 +85,11 @@
             "description": "A memory hook, shown after answering."
           }
         ],
-        "prepare": "// The card only sees the letter; the code and mnemonic stay in the key until grading.\nreturn {\n  view: { letter: fields.letter },\n  key: { code: fields.code, mnemonic: fields.mnemonic ?? \"\" },\n};\n",
+        "prepare": "// The card only sees the character; the code and mnemonic stay in the key until grading.\nreturn {\n  view: { letter: fields.letter, name: fields.name ?? \"\", prosign: !!fields.prosign },\n  key: { code: fields.code, mnemonic: fields.mnemonic ?? \"\" },\n};\n",
         "template": {
-          "html": "<div class=\"mo-eyebrow\">Tap it out in Morse</div>\n<div class=\"mo-letter\">{{letter}}</div>\n<div class=\"mo-tape mo-mine\" aria-live=\"polite\"></div>\n<div class=\"mo-pad only-answer\">\n  <button type=\"button\" class=\"mo-key\" data-s=\".\"><span class=\"mo-sym dot\"></span><small>dot <kbd>.</kbd></small></button>\n  <button type=\"button\" class=\"mo-key\" data-s=\"-\"><span class=\"mo-sym dash\"></span><small>dash <kbd>-</kbd></small></button>\n  <button type=\"button\" class=\"mo-key mo-del\" data-s=\"del\" aria-label=\"Delete\">⌫</button>\n</div>\n<template data-on=\"result\">\n  <div class=\"e-reveal mo-result\">\n    <div class=\"mo-lamp\"></div>\n    <div class=\"e-section-title\">{{letter}} in Morse</div>\n    <div class=\"mo-tape mo-correct\"></div>\n    {{#mnemonic}}<div class=\"prose e-muted\">{{md:mnemonic}}</div>{{/mnemonic}}\n  </div>\n</template>\n",
-          "css": ".mo-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--highlight); margin-bottom: -0.75rem; }\n.mo-letter { font: 600 5.5rem/1 var(--font-mono); text-align: center; margin: 0.5rem 0 0; }\n.mo-tape { display: flex; align-items: center; justify-content: center; gap: 0.7rem; min-height: 2.6rem; }\n.mo-empty { color: var(--muted-foreground); font-size: 0.9rem; }\n.mo-sym { --c: var(--highlight); display: inline-block; height: 1.1rem; border-radius: 999px; background: var(--c);\n  box-shadow: 0 0 6px color-mix(in oklab, var(--c) 80%, transparent), 0 0 18px color-mix(in oklab, var(--c) 45%, transparent); transition: transform 0.12s, filter 0.12s; }\n.mo-sym.dot { width: 1.1rem; }\n.mo-sym.dash { width: 3.3rem; }\n.mo-sym.new { animation: mo-pop 0.28s cubic-bezier(.2, 1.6, .4, 1); }\n.mo-sym.is-ok { --c: var(--success); }\n.mo-sym.is-bad { --c: var(--danger); }\n.mo-sym.is-missed { --c: var(--muted-foreground); opacity: 0.5; box-shadow: none; }\n.mo-sym.lit { filter: brightness(1.6); transform: scale(1.18); }\n@keyframes mo-pop { from { transform: scale(0.2); filter: brightness(2.2); } }\n.mo-pad { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.6rem; max-width: 26rem; width: 100%; margin: 0 auto; }\n.mo-key { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.55rem; height: 5.5rem; border-radius: var(--radius);\n  border: 1px solid var(--border); background: color-mix(in oklab, var(--foreground) 4%, transparent); color: var(--muted-foreground); cursor: pointer; transition: background 0.1s, transform 0.08s; }\n.mo-key:hover { background: color-mix(in oklab, var(--foreground) 9%, transparent); }\n.mo-key:active, .mo-key.down { transform: scale(0.96); background: color-mix(in oklab, var(--highlight) 18%, transparent); }\n.mo-key small { font-size: 0.75rem; }\n.mo-del { width: 4rem; font-size: 1.3rem; }\n.mo-result { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; text-align: center; }\n.mo-result .e-section-title { margin: 0.3rem 0 -0.2rem; }\n.mo-lamp { flex: none; width: 3rem; height: 3rem; border-radius: 50%; background: color-mix(in oklab, var(--foreground) 10%, transparent); transition: background 0.05s, box-shadow 0.05s; }\n.mo-lamp.on { background: #ffe9a8; box-shadow: 0 0 14px #ffd36a, 0 0 42px color-mix(in oklab, #ffb02e 70%, transparent); }\n",
-          "js": "const mine = etude.$(\".mo-mine\");\nlet seq = typeof etude.answer === \"string\" ? etude.answer : \"\";\nconst sym = (s, cls = \"\") => `<span class=\"mo-sym ${s === \".\" ? \"dot\" : \"dash\"} ${cls}\"></span>`;\n\nconst draw = (fresh) => {\n  mine.innerHTML = seq ? [...seq].map((s, i) => sym(s, fresh && i === seq.length - 1 ? \"new\" : \"\")).join(\"\") : `<span class=\"mo-empty\">Tap dot and dash</span>`;\n  etude.setReady(seq.length > 0);\n};\nconst press = (s) => {\n  if (etude.mode !== \"answer\") return;\n  seq = s === \"del\" ? seq.slice(0, -1) : (seq + s).slice(0, 7);\n  draw(s !== \"del\");\n};\netude.$$(\".mo-key\").forEach((b) => b.addEventListener(\"click\", () => press(b.dataset.s)));\nwindow.addEventListener(\"keydown\", (e) => {\n  const s = { \".\": \".\", \"-\": \"-\", j: \".\", k: \"-\", Backspace: \"del\" }[e.key];\n  if (!s || etude.mode !== \"answer\") return;\n  e.preventDefault();\n  press(s);\n  const b = etude.$(`.mo-key[data-s=\"${s}\"]`);\n  b?.classList.add(\"down\");\n  setTimeout(() => b?.classList.remove(\"down\"), 120);\n});\ndraw(false);\netude.getAnswer(() => seq);\n\netude.onResult(({ key, answer }) => {\n  const sent = String(answer ?? \"\");\n  const code = key.code;\n  // Your taps, marked symbol by symbol; anything you left out shows faded.\n  mine.innerHTML = [...sent].map((s, i) => sym(s, s === code[i] ? \"is-ok\" : \"is-bad\")).join(\"\") +\n    [...code.slice(sent.length)].map((s) => sym(s, \"is-missed\")).join(\"\");\n  const right = etude.$(\".mo-correct\");\n  right.innerHTML = [...code].map((s) => sym(s)).join(\"\");\n  // Blink the right code on the lamp at Morse timing: dot 1 unit, dash 3, gaps 1, then a pause.\n  const lamp = etude.$(\".mo-lamp\");\n  const parts = etude.$$(\".mo-correct .mo-sym\");\n  const U = 170;\n  const loop = (i) => {\n    if (!lamp.isConnected) return;\n    if (i === code.length) return setTimeout(() => loop(0), 6 * U);\n    lamp.classList.add(\"on\"); parts[i].classList.add(\"lit\");\n    setTimeout(() => {\n      lamp.classList.remove(\"on\"); parts[i].classList.remove(\"lit\");\n      setTimeout(() => loop(i + 1), U);\n    }, code[i] === \".\" ? U : 3 * U);\n  };\n  setTimeout(() => loop(0), 400);\n});\n"
+          "html": "<div class=\"mo-eyebrow\">Tap it out in Morse</div>\n<div class=\"mo-letter\">{{letter}}</div>\n{{#name}}<div class=\"mo-name\">{{name}}</div>{{/name}}\n<div class=\"mo-tape mo-mine\" aria-live=\"polite\"></div>\n<div class=\"mo-pad only-answer\">\n  <button type=\"button\" class=\"mo-key\" data-s=\".\"><span class=\"mo-sym dot\"></span><small>dot <kbd>.</kbd></small></button>\n  <button type=\"button\" class=\"mo-key\" data-s=\"-\"><span class=\"mo-sym dash\"></span><small>dash <kbd>-</kbd></small></button>\n  <button type=\"button\" class=\"mo-key mo-del\" data-s=\"del\" aria-label=\"Delete\">⌫</button>\n</div>\n<template data-on=\"result\">\n  <div class=\"e-reveal mo-result\">\n    <div class=\"mo-lamp\"></div>\n    <div class=\"e-section-title\">{{letter}} in Morse</div>\n    <div class=\"mo-tape mo-correct\"></div>\n    {{#mnemonic}}<div class=\"prose e-muted\">{{md:mnemonic}}</div>{{/mnemonic}}\n  </div>\n</template>\n",
+          "css": ".mo-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--highlight); margin-bottom: -0.75rem; }\n.mo-letter { font: 600 5.5rem/1 var(--font-mono); text-align: center; margin: 0.5rem 0 0; }\n.mo-letter.is-prosign { width: fit-content; margin: 0.9rem auto 0; line-height: 0.8; border-top: 0.06em solid currentColor; padding-top: 0.02em; }\n.mo-name { text-align: center; color: var(--muted-foreground); font-size: 0.9rem; margin-top: -0.6rem; }\n.mo-tape { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.7rem; min-height: 2.6rem; }\n.mo-tape.long { gap: 0.5rem; }\n.mo-tape.long .mo-sym.dot { width: 0.95rem; height: 0.95rem; }\n.mo-tape.long .mo-sym.dash { width: 2.5rem; height: 0.95rem; }\n.mo-empty { color: var(--muted-foreground); font-size: 0.9rem; }\n.mo-sym { --c: var(--highlight); display: inline-block; height: 1.1rem; border-radius: 999px; background: var(--c);\n  box-shadow: 0 0 6px color-mix(in oklab, var(--c) 80%, transparent), 0 0 18px color-mix(in oklab, var(--c) 45%, transparent); transition: transform 0.12s, filter 0.12s; }\n.mo-sym.dot { width: 1.1rem; }\n.mo-sym.dash { width: 3.3rem; }\n.mo-sym.new { animation: mo-pop 0.28s cubic-bezier(.2, 1.6, .4, 1); }\n.mo-sym.is-ok { --c: var(--success); }\n.mo-sym.is-bad { --c: var(--danger); }\n.mo-sym.is-missed { --c: var(--muted-foreground); opacity: 0.5; box-shadow: none; }\n.mo-sym.lit { filter: brightness(1.6); transform: scale(1.18); }\n@keyframes mo-pop { from { transform: scale(0.2); filter: brightness(2.2); } }\n.mo-pad { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.6rem; max-width: 26rem; width: 100%; margin: 0 auto; }\n.mo-key { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.55rem; height: 5.5rem; border-radius: var(--radius);\n  border: 1px solid var(--border); background: color-mix(in oklab, var(--foreground) 4%, transparent); color: var(--muted-foreground); cursor: pointer; transition: background 0.1s, transform 0.08s; }\n.mo-key:hover { background: color-mix(in oklab, var(--foreground) 9%, transparent); }\n.mo-key:active, .mo-key.down { transform: scale(0.96); background: color-mix(in oklab, var(--highlight) 18%, transparent); }\n.mo-key small { font-size: 0.75rem; }\n.mo-del { width: 4rem; font-size: 1.3rem; }\n.mo-result { display: flex; flex-direction: column; align-items: center; gap: 0.7rem; text-align: center; }\n.mo-result .e-section-title { margin: 0.3rem 0 -0.2rem; }\n.mo-lamp { flex: none; width: 3rem; height: 3rem; border-radius: 50%; background: color-mix(in oklab, var(--foreground) 10%, transparent); transition: background 0.05s, box-shadow 0.05s; }\n.mo-lamp.on { background: #ffe9a8; box-shadow: 0 0 14px #ffd36a, 0 0 42px color-mix(in oklab, #ffb02e 70%, transparent); }\n",
+          "js": "const mine = etude.$(\".mo-mine\");\nif (etude.view.prosign) etude.$(\".mo-letter\").classList.add(\"is-prosign\");\nconst MAX = 9; // the longest code here is SOS, ...---...\nlet seq = typeof etude.answer === \"string\" ? etude.answer : \"\";\nconst sym = (s, cls = \"\") => `<span class=\"mo-sym ${s === \".\" ? \"dot\" : \"dash\"} ${cls}\"></span>`;\n\nconst draw = (fresh) => {\n  mine.innerHTML = seq ? [...seq].map((s, i) => sym(s, fresh && i === seq.length - 1 ? \"new\" : \"\")).join(\"\") : `<span class=\"mo-empty\">Tap dot and dash</span>`;\n  mine.classList.toggle(\"long\", seq.length > 6);\n  etude.setReady(seq.length > 0);\n};\nconst press = (s) => {\n  if (etude.mode !== \"answer\") return;\n  seq = s === \"del\" ? seq.slice(0, -1) : (seq + s).slice(0, MAX);\n  draw(s !== \"del\");\n};\netude.$$(\".mo-key\").forEach((b) => b.addEventListener(\"click\", () => press(b.dataset.s)));\nwindow.addEventListener(\"keydown\", (e) => {\n  const s = { \".\": \".\", \"-\": \"-\", j: \".\", k: \"-\", Backspace: \"del\" }[e.key];\n  if (!s || etude.mode !== \"answer\") return;\n  e.preventDefault();\n  press(s);\n  const b = etude.$(`.mo-key[data-s=\"${s}\"]`);\n  b?.classList.add(\"down\");\n  setTimeout(() => b?.classList.remove(\"down\"), 120);\n});\ndraw(false);\netude.getAnswer(() => seq);\n\netude.onResult(({ key, answer }) => {\n  const sent = String(answer ?? \"\");\n  const code = key.code;\n  // Your taps, marked symbol by symbol; anything you left out shows faded.\n  mine.innerHTML = [...sent].map((s, i) => sym(s, s === code[i] ? \"is-ok\" : \"is-bad\")).join(\"\") +\n    [...code.slice(sent.length)].map((s) => sym(s, \"is-missed\")).join(\"\");\n  mine.classList.toggle(\"long\", Math.max(sent.length, code.length) > 6);\n  const right = etude.$(\".mo-correct\");\n  right.classList.toggle(\"long\", code.length > 6);\n  right.innerHTML = [...code].map((s) => sym(s)).join(\"\");\n  // Blink the right code on the lamp at Morse timing: dot 1 unit, dash 3, gaps 1, then a pause.\n  const lamp = etude.$(\".mo-lamp\");\n  const parts = etude.$$(\".mo-correct .mo-sym\");\n  const U = 170;\n  const loop = (i) => {\n    if (!lamp.isConnected) return;\n    if (i === code.length) return setTimeout(() => loop(0), 6 * U);\n    lamp.classList.add(\"on\"); parts[i].classList.add(\"lit\");\n    setTimeout(() => {\n      lamp.classList.remove(\"on\"); parts[i].classList.remove(\"lit\");\n      setTimeout(() => loop(i + 1), U);\n    }, code[i] === \".\" ? U : 3 * U);\n  };\n  setTimeout(() => loop(0), 400);\n});\n"
         },
         "grader": {
           "kind": "script",
@@ -69,11 +100,44 @@
     ],
     "items": [
       {
+        "id": "morse.a",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "A",
+          "code": ".-",
+          "mnemonic": "a-**BOUT**: short, long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.b",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "B",
+          "code": "-...",
+          "mnemonic": "**BEAU**-ti-ful-ly: one long, three short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
         "id": "morse.c",
         "type": "morse",
         "deck": "Morse code::Letters",
         "tags": [
-          "morse"
+          "morse",
+          "letters"
         ],
         "fields": {
           "letter": "C",
@@ -84,11 +148,252 @@
         "notes": ""
       },
       {
+        "id": "morse.d",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "D",
+          "code": "-..",
+          "mnemonic": "**DAN**-ger-ous: long, short, short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.e",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "E",
+          "code": ".",
+          "mnemonic": "Eh: one blip. The most common letter gets the shortest code."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.f",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "F",
+          "code": "..-.",
+          "mnemonic": "fu-ri-**OUS**-ly: short short, long, short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.g",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "G",
+          "code": "--.",
+          "mnemonic": "**GOOD GRA**-vy: long long short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.h",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "H",
+          "code": "....",
+          "mnemonic": "hip-pi-ty-hop: four quick hops."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.i",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "I",
+          "code": "..",
+          "mnemonic": "i-vy: two quick ones."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.j",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "J",
+          "code": ".---",
+          "mnemonic": "jee **WHIZ WHIZ WHIZ**: one short, three long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.k",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "K",
+          "code": "-.-",
+          "mnemonic": "**KAN**-ga-**ROO**: long short long. Alone, K also means *go ahead*."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.l",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "L",
+          "code": ".-..",
+          "mnemonic": "le-**GIS**-la-tor: short, long, short short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.m",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "M",
+          "code": "--",
+          "mnemonic": "**MM**: two long hums."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.n",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "N",
+          "code": "-.",
+          "mnemonic": "**NAV**-y: long, short. A flipped."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.o",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "O",
+          "code": "---",
+          "mnemonic": "**O**h-oh-oh: three long tones. The other half of SOS."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "P",
+          "code": ".--.",
+          "mnemonic": "a **PO-LICE**-man: short, long long, short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.q",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "Q",
+          "code": "--.-",
+          "mnemonic": "**GOD SAVE** the **QUEEN**: long long short long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.r",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "R",
+          "code": ".-.",
+          "mnemonic": "ro-**TA**-tion: short long short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
         "id": "morse.s",
         "type": "morse",
         "deck": "Morse code::Letters",
         "tags": [
-          "morse"
+          "morse",
+          "letters"
         ],
         "fields": {
           "letter": "S",
@@ -99,16 +404,1268 @@
         "notes": ""
       },
       {
-        "id": "morse.o",
+        "id": "morse.t",
         "type": "morse",
         "deck": "Morse code::Letters",
         "tags": [
-          "morse"
+          "morse",
+          "letters"
         ],
         "fields": {
-          "letter": "O",
-          "code": "---",
-          "mnemonic": "**O**h-oh-oh: three long tones. The other half of SOS."
+          "letter": "T",
+          "code": "-",
+          "mnemonic": "**TALL**: one long tone. The second most common letter gets the other one-element code."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.u",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "U",
+          "code": "..-",
+          "mnemonic": "un-i-**FORM**: short short long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.v",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "V",
+          "code": "...-",
+          "mnemonic": "da-da-da-**DUM**: Beethoven's Fifth opens with V."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.w",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "W",
+          "code": ".--",
+          "mnemonic": "the **WHITE WHALE**: short, long long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "X",
+          "code": "-..-",
+          "mnemonic": "**X** marks the **SPOT**: long short short long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.y",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "Y",
+          "code": "-.--",
+          "mnemonic": "**YEL**-low **YO-YO**: long, short, long long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.z",
+        "type": "morse",
+        "deck": "Morse code::Letters",
+        "tags": [
+          "morse",
+          "letters"
+        ],
+        "fields": {
+          "letter": "Z",
+          "code": "--..",
+          "mnemonic": "**ZIG-ZAG**-ging-ly: long long, short short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d1",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "1",
+          "code": ".----",
+          "mnemonic": "One dot, then dashes to fill five."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d2",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "2",
+          "code": "..---",
+          "mnemonic": "Two dots, then dashes to fill five."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d3",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "3",
+          "code": "...--",
+          "mnemonic": "Three dots, then dashes to fill five."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d4",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "4",
+          "code": "....-",
+          "mnemonic": "Four dots, then one dash to fill five."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d5",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "5",
+          "code": ".....",
+          "mnemonic": "Five dots: the halfway point, all short."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d6",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "6",
+          "code": "-....",
+          "mnemonic": "One dash, then dots to fill five. 6 is 1 flipped."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d7",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "7",
+          "code": "--...",
+          "mnemonic": "Two dashes, then dots to fill five. 7 is 2 flipped."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d8",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "8",
+          "code": "---..",
+          "mnemonic": "Three dashes, then dots to fill five. 8 is 3 flipped."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d9",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "9",
+          "code": "----.",
+          "mnemonic": "Four dashes, then a dot. 9 is 4 flipped."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.d0",
+        "type": "morse",
+        "deck": "Morse code::Numbers",
+        "tags": [
+          "morse",
+          "numbers"
+        ],
+        "fields": {
+          "letter": "0",
+          "code": "-----",
+          "mnemonic": "Five dashes: all long."
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.period",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": ".",
+          "code": ".-.-.-",
+          "mnemonic": "A three times: short long, short long, short long.",
+          "name": "Full stop"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.comma",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": ",",
+          "code": "--..--",
+          "mnemonic": "M I M: long long, short short, long long.",
+          "name": "Comma"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.question",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "?",
+          "code": "..--..",
+          "mnemonic": "I M I: short short, long long, short short.",
+          "name": "Question mark"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.apostrophe",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "'",
+          "code": ".----.",
+          "mnemonic": "The digit 1 (.----) with a dot on the end.",
+          "name": "Apostrophe"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.slash",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "/",
+          "code": "-..-.",
+          "mnemonic": "X (-..-) with a dot on the end.",
+          "name": "Slash"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.lparen",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "(",
+          "code": "-.--.",
+          "mnemonic": "Y (-.--) with a dot on the end. Also the KN prosign.",
+          "name": "Open parenthesis"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.rparen",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": ")",
+          "code": "-.--.-",
+          "mnemonic": "Open parenthesis plus a dash: close it with a long one.",
+          "name": "Close parenthesis"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.colon",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": ":",
+          "code": "---...",
+          "mnemonic": "O then S: three long, three short.",
+          "name": "Colon"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.equals",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "=",
+          "code": "-...-",
+          "mnemonic": "Long, three short, long: a bar on each side, like =. Also the BT prosign.",
+          "name": "Equals sign"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.plus",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "+",
+          "code": ".-.-.",
+          "mnemonic": "Alternates short long, and ends short: the A R prosign, end of message.",
+          "name": "Plus sign"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.minus",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "-",
+          "code": "-....-",
+          "mnemonic": "The digit 6 (-....) with a dash on the end.",
+          "name": "Hyphen or minus"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.quote",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "\"",
+          "code": ".-..-.",
+          "mnemonic": "R R: short long short, twice. Symmetric, like a pair of quotes.",
+          "name": "Quotation mark"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.at",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "@",
+          "code": ".--.-.",
+          "mnemonic": "A and C run together: @ is an a inside a C. Added by the ITU in 2004.",
+          "name": "At sign"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.exclamation",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "!",
+          "code": "-.-.--",
+          "mnemonic": "C then M: long short long short, long long.",
+          "name": "Exclamation mark (not ITU)"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.ampersand",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "&",
+          "code": ".-...",
+          "mnemonic": "A then S, the *wait* prosign.",
+          "name": "Ampersand (not ITU)"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.semicolon",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": ";",
+          "code": "-.-.-.",
+          "mnemonic": "The full stop flipped: alternates, but starts long.",
+          "name": "Semicolon (not ITU)"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.underscore",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "_",
+          "code": "..--.-",
+          "mnemonic": "U then K: short short long, long short long.",
+          "name": "Underscore (not ITU)"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.p.dollar",
+        "type": "morse",
+        "deck": "Morse code::Punctuation",
+        "tags": [
+          "morse",
+          "punctuation"
+        ],
+        "fields": {
+          "letter": "$",
+          "code": "...-..-",
+          "mnemonic": "S then X: S for the curve, X for the bar through it.",
+          "name": "Dollar sign (not ITU)"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.sos",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "SOS",
+          "code": "...---...",
+          "mnemonic": "S O S with no gaps: three short, three long, three short in one run.",
+          "name": "Distress",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.ar",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "AR",
+          "code": ".-.-.",
+          "mnemonic": "A and R run together. Same code as +.",
+          "name": "End of message",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.as",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "AS",
+          "code": ".-...",
+          "mnemonic": "A and S run together. Same code as &.",
+          "name": "Wait",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.bt",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "BT",
+          "code": "-...-",
+          "mnemonic": "B and T run together. Same code as =.",
+          "name": "New paragraph",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.ct",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "CT",
+          "code": "-.-.-",
+          "mnemonic": "C and T run together, also written KA: alternates, starting and ending long.",
+          "name": "Start of transmission",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.hh",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "HH",
+          "code": "........",
+          "mnemonic": "H twice: eight dots. Send it, then send the word again.",
+          "name": "Error",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.kn",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "KN",
+          "code": "-.--.",
+          "mnemonic": "K and N run together. Same code as (.",
+          "name": "Go ahead, named station only",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.sk",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "SK",
+          "code": "...-.-",
+          "mnemonic": "S and K run together: three short, then long short long.",
+          "name": "End of contact",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.ps.sn",
+        "type": "morse",
+        "deck": "Morse code::Prosigns",
+        "tags": [
+          "morse",
+          "prosigns"
+        ],
+        "fields": {
+          "letter": "SN",
+          "code": "...-.",
+          "mnemonic": "S and N run together, also written VE: V (...-) and a dot.",
+          "name": "Understood",
+          "prosign": true
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.a-grave",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "À",
+          "code": ".--.-",
+          "mnemonic": "P (.--.) with a dash on the end.",
+          "name": "A grave · same code as Å"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.a-ring",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Å",
+          "code": ".--.-",
+          "mnemonic": "P (.--.) with a dash on the end.",
+          "name": "A ring · same code as À"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.a-umlaut",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ä",
+          "code": ".-.-",
+          "mnemonic": "A twice: short long, short long.",
+          "name": "A umlaut · same code as Æ, Ą"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.ae",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Æ",
+          "code": ".-.-",
+          "mnemonic": "A twice: short long, short long.",
+          "name": "Ash · same code as Ä, Ą"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.a-ogonek",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ą",
+          "code": ".-.-",
+          "mnemonic": "A twice: short long, short long.",
+          "name": "A ogonek · same code as Ä, Æ"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.c-acute",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ć",
+          "code": "-.-..",
+          "mnemonic": "C (-.-.) with a dot on the end.",
+          "name": "C acute · same code as Ĉ, Ç"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.c-circumflex",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ĉ",
+          "code": "-.-..",
+          "mnemonic": "C (-.-.) with a dot on the end.",
+          "name": "C circumflex · same code as Ć, Ç"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.c-cedilla",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ç",
+          "code": "-.-..",
+          "mnemonic": "C (-.-.) with a dot on the end.",
+          "name": "C cedilla · same code as Ć, Ĉ"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.ch",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "CH",
+          "code": "----",
+          "mnemonic": "Four dashes: one more than O.",
+          "name": "CH · same code as Ĥ, Š"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.d-stroke",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Đ",
+          "code": "..-..",
+          "mnemonic": "Two short, one long, two short: symmetric around the dash.",
+          "name": "D with stroke · same code as É, Ę"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.eth",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ð",
+          "code": "..--.",
+          "mnemonic": "Two short, two long, one short.",
+          "name": "Eth"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.e-acute",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "É",
+          "code": "..-..",
+          "mnemonic": "Two short, one long, two short: symmetric around the dash.",
+          "name": "E acute · the one accented letter in the ITU standard"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.e-grave",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "È",
+          "code": ".-..-",
+          "mnemonic": "L (.-..) with a dash on the end.",
+          "name": "E grave · same code as Ł"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.e-ogonek",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ę",
+          "code": "..-..",
+          "mnemonic": "Two short, one long, two short: symmetric around the dash.",
+          "name": "E ogonek · same code as Đ, É"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.g-circumflex",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ĝ",
+          "code": "--.-.",
+          "mnemonic": "G (--.) then N (-.).",
+          "name": "G circumflex"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.h-circumflex",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ĥ",
+          "code": "----",
+          "mnemonic": "Four dashes: one more than O.",
+          "name": "H circumflex · same code as CH, Š"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.j-circumflex",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ĵ",
+          "code": ".---.",
+          "mnemonic": "J (.---) with a dot on the end.",
+          "name": "J circumflex"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.l-stroke",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ł",
+          "code": ".-..-",
+          "mnemonic": "L (.-..) with a dash on the end.",
+          "name": "L with stroke · same code as È"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.n-acute",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ń",
+          "code": "--.--",
+          "mnemonic": "M, a dot, M: long long, short, long long.",
+          "name": "N acute · same code as Ñ"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.n-tilde",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ñ",
+          "code": "--.--",
+          "mnemonic": "M, a dot, M: long long, short, long long.",
+          "name": "N tilde · same code as Ń"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.o-acute",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ó",
+          "code": "---.",
+          "mnemonic": "O (---) with a dot on the end.",
+          "name": "O acute · same code as Ö, Ø"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.o-umlaut",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ö",
+          "code": "---.",
+          "mnemonic": "O (---) with a dot on the end.",
+          "name": "O umlaut · same code as Ó, Ø"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.o-stroke",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ø",
+          "code": "---.",
+          "mnemonic": "O (---) with a dot on the end.",
+          "name": "O with stroke · same code as Ó, Ö"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.s-acute",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ś",
+          "code": "...-...",
+          "mnemonic": "S, one dash, S: three short, long, three short.",
+          "name": "S acute"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.s-circumflex",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ŝ",
+          "code": "...-.",
+          "mnemonic": "V (...-) with a dot on the end.",
+          "name": "S circumflex · same code as the SN prosign"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.s-caron",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Š",
+          "code": "----",
+          "mnemonic": "Four dashes: one more than O.",
+          "name": "S caron · same code as CH, Ĥ"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.thorn",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Þ",
+          "code": ".--..",
+          "mnemonic": "W (.--) then I (..).",
+          "name": "Thorn"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.u-umlaut",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ü",
+          "code": "..--",
+          "mnemonic": "U (..-) with one more dash.",
+          "name": "U umlaut · same code as Ŭ"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.u-breve",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ŭ",
+          "code": "..--",
+          "mnemonic": "U (..-) with one more dash.",
+          "name": "U breve · same code as Ü"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.z-acute",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ź",
+          "code": "--..-.",
+          "mnemonic": "Z (--..) then N (-.).",
+          "name": "Z acute"
+        },
+        "source": "",
+        "notes": ""
+      },
+      {
+        "id": "morse.x.z-dot",
+        "type": "morse",
+        "deck": "Morse code::Accented letters",
+        "tags": [
+          "morse",
+          "accented-letters"
+        ],
+        "fields": {
+          "letter": "Ż",
+          "code": "--..-",
+          "mnemonic": "Z (--..) with a dash on the end.",
+          "name": "Z dot"
         },
         "source": "",
         "notes": ""
