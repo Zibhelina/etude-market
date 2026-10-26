@@ -1,8 +1,54 @@
 {
  "etude": "market/1",
- "generated": "2026-10-25T11:39:36.236Z",
+ "generated": "2026-10-26T05:14:19.536Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
+  {
+   "id": "periodic-table",
+   "kind": "deck",
+   "name": "Periodic table",
+   "description": "All 118 elements, each asked eight ways, one subdeck per way: type the symbol, type the name, tap its cell on a blank table, name a lit-up cell, give its atomic number, period and group, its atomic mass, its family and block, and write its electron configuration. Every answer ends on the element's tile and its place in the coloured table, so the table builds itself in your head as you go. Uses the Element card type, which comes along. Data from PubChem.",
+   "author": "Zibhelina",
+   "tags": [
+    "chemistry",
+    "periodic-table",
+    "science"
+   ],
+   "version": "1",
+   "updated": "2026-10-26",
+   "path": "entries/decks/periodic-table.json",
+   "bytes": 804829,
+   "cover": "covers/decks/periodic-table.webp",
+   "summary": {
+    "decks": [
+     "Periodic table",
+     "Periodic table::1 Symbols",
+     "Periodic table::2 Names",
+     "Periodic table::3 Find it on the table",
+     "Periodic table::4 Name the cell",
+     "Periodic table::5 Numbers",
+     "Periodic table::6 Atomic mass",
+     "Periodic table::7 Family and block",
+     "Periodic table::8 Electron configuration"
+    ],
+    "items": 944,
+    "cardTypes": {
+     "element": 944
+    },
+    "types": [
+     {
+      "id": "element",
+      "name": "Element"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "symbol",
+     "Na comes from the Latin natrium.",
+     "K comes from the Latin kalium."
+    ]
+   }
+  },
   {
    "id": "piano-chord",
    "kind": "type",
