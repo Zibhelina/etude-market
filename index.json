@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-10-26T05:14:48.058Z",
+ "generated": "2026-10-26T05:47:20.901Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -1031,25 +1031,30 @@
    "id": "morse-code-letters",
    "kind": "deck",
    "name": "Morse code",
-   "description": "Letters in dots and dashes, with a memory hook for each. Uses the Morse code card type, which comes along.",
+   "description": "Every character with a Morse code: A to Z, 0 to 9, punctuation, prosigns like SOS and SK, and accented letters, 94 cards with a memory hook each. Uses the Morse code card type, which comes along.",
    "author": "Zibhelina",
    "tags": [
     "morse",
-    "radio"
+    "radio",
+    "ham radio"
    ],
-   "version": "1",
+   "version": "2",
    "updated": "2026-10-25",
    "path": "entries/decks/morse-code-letters.json",
-   "bytes": 8890,
+   "bytes": 48216,
    "cover": "covers/decks/morse-code-letters.webp",
    "summary": {
     "decks": [
      "Morse code",
-     "Morse code::Letters"
+     "Morse code::Accented letters",
+     "Morse code::Letters",
+     "Morse code::Numbers",
+     "Morse code::Prosigns",
+     "Morse code::Punctuation"
     ],
-    "items": 3,
+    "items": 94,
     "cardTypes": {
-     "morse": 3
+     "morse": 94
     },
     "types": [
      {
@@ -1059,9 +1064,9 @@
     ],
     "watch": false,
     "samples": [
-     "C",
-     "S",
-     "O"
+     "A",
+     "B",
+     "C"
     ]
    }
   },
@@ -1069,35 +1074,37 @@
    "id": "morse-code",
    "kind": "type",
    "name": "Morse code",
-   "description": "See a letter, tap it out in dots and dashes; graded by script, then the right code blinks back.",
+   "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
    "author": "Zibhelina",
    "tags": [
     "morse"
    ],
-   "version": "1",
+   "version": "2",
    "updated": "2026-10-25",
    "path": "entries/types/morse-code.json",
-   "bytes": 8767,
+   "bytes": 11390,
    "cover": "covers/types/morse-code.webp",
    "summary": {
     "types": [
      {
       "id": "morse",
       "name": "Morse code",
-      "description": "See a letter, tap it out in dots and dashes; checked by script, then the right code blinks back.",
+      "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
       "grader": "script",
       "fields": [
        "letter",
+       "name",
+       "prosign",
        "code",
        "mnemonic"
       ]
      }
     ],
-    "items": 3,
+    "items": 5,
     "samples": [
      "C",
-     "S",
-     "O"
+     "O",
+     "S"
     ]
    }
   },
