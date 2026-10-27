@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-10-27T16:44:25.605Z",
+ "generated": "2026-10-27T16:48:18.140Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -70,6 +70,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/federal-subjects-of-russia.json",
    "bytes": 2302163,
+   "cover": "covers/decks/federal-subjects-of-russia.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -183,6 +184,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/prefectures-of-japan.json",
    "bytes": 2252161,
+   "cover": "covers/decks/prefectures-of-japan.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -224,6 +226,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/provinces-and-regions-of-china.json",
    "bytes": 2239532,
+   "cover": "covers/decks/provinces-and-regions-of-china.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -265,6 +268,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/provinces-and-territories-of-canada.json",
    "bytes": 2217312,
+   "cover": "covers/decks/provinces-and-territories-of-canada.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -306,6 +310,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/provinces-of-south-africa.json",
    "bytes": 2212689,
+   "cover": "covers/decks/provinces-of-south-africa.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -347,6 +352,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/regions-of-france.json",
    "bytes": 2222679,
+   "cover": "covers/decks/regions-of-france.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -388,6 +394,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/regions-of-italy.json",
    "bytes": 2224118,
+   "cover": "covers/decks/regions-of-italy.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -429,6 +436,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/states-and-territories-of-australia.json",
    "bytes": 2211701,
+   "cover": "covers/decks/states-and-territories-of-australia.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -470,6 +478,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/states-and-territories-of-india.json",
    "bytes": 2241850,
+   "cover": "covers/decks/states-and-territories-of-india.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -511,6 +520,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/states-of-brazil.json",
    "bytes": 2232547,
+   "cover": "covers/decks/states-of-brazil.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -552,6 +562,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/states-of-mexico.json",
    "bytes": 2236966,
+   "cover": "covers/decks/states-of-mexico.webp",
    "summary": {
     "decks": [
      "States and Regions",
@@ -593,6 +604,7 @@
    "updated": "2026-10-27",
    "path": "entries/decks/states-of-the-united-states.json",
    "bytes": 2259386,
+   "cover": "covers/decks/states-of-the-united-states.webp",
    "summary": {
     "decks": [
      "States and Regions",
