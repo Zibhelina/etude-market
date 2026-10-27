@@ -1,8 +1,98 @@
 {
  "etude": "market/1",
- "generated": "2026-10-27T16:07:58.020Z",
+ "generated": "2026-10-27T16:40:29.510Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
+  {
+   "id": "countries-of-the-world",
+   "kind": "deck",
+   "name": "Countries of the World",
+   "description": "All 197 countries (193 UN members, Vatican City, Palestine, Kosovo and Taiwan), one subdeck per continent: Africa 54, Asia 48, Europe 46, North America 23, Oceania 14, South America 12. Each country has four exercises: name the highlighted country, find it on the map, recall a capital, and name the country from a capital. Zoom and drag around; small island nations get a dot you can tap. Multilingual names and small typos are accepted. Capitals are marked and labelled on the map after answering, with explanations for unusual capital roles. Includes the updated Country on a map card type. Borders from Natural Earth; country names from mledoze/countries.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "countries",
+    "maps",
+    "world",
+    "capitals"
+   ],
+   "version": "2",
+   "updated": "2026-10-27",
+   "path": "entries/decks/countries-of-the-world.json",
+   "bytes": 403504,
+   "cover": "covers/decks/countries-of-the-world.webp",
+   "media": [
+    "media/decks/countries-of-the-world/01-canada.webp"
+   ],
+   "summary": {
+    "decks": [
+     "Countries of the World",
+     "Countries of the World::Africa",
+     "Countries of the World::Asia",
+     "Countries of the World::Europe",
+     "Countries of the World::North America",
+     "Countries of the World::Oceania",
+     "Countries of the World::South America"
+    ],
+    "items": 197,
+    "cardTypes": {
+     "country-map": 197
+    },
+    "types": [
+     {
+      "id": "country-map",
+      "name": "Country on a map"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Algeria",
+     "Angola",
+     "Benin"
+    ]
+   }
+  },
+  {
+   "id": "federal-subjects-of-russia",
+   "kind": "deck",
+   "name": "Federal Subjects of Russia",
+   "description": "83 divisions. Four exercises: name the highlighted federal subject, locate it, recall a capital, and name the federal subject from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Covers the 83 internationally recognized federal subjects; disputed Ukrainian annexations are excluded. Government-seat exceptions are explained after answering. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "russia"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/federal-subjects-of-russia.json",
+   "bytes": 2302163,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::Federal Subjects of Russia"
+    ],
+    "items": 83,
+    "cardTypes": {
+     "region-map": 83
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Altai Krai",
+     "Altai Republic",
+     "Amur Oblast"
+    ]
+   }
+  },
   {
    "id": "osaka-jade",
    "kind": "theme",
@@ -73,6 +163,457 @@
      },
      "css": "/*\nMIT License\n\nCopyright (c) 2025 Justin Lowry\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n*/"
     }
+   }
+  },
+  {
+   "id": "prefectures-of-japan",
+   "kind": "deck",
+   "name": "Prefectures of Japan",
+   "description": "47 divisions. Four exercises: name the highlighted prefecture, locate it, recall a capital, and name the prefecture from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "japan"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/prefectures-of-japan.json",
+   "bytes": 2252161,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::Prefectures of Japan"
+    ],
+    "items": 47,
+    "cardTypes": {
+     "region-map": 47
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Aichi",
+     "Akita",
+     "Aomori"
+    ]
+   }
+  },
+  {
+   "id": "provinces-and-regions-of-china",
+   "kind": "deck",
+   "name": "Provinces and Regions of China",
+   "description": "33 divisions. Four exercises: name the highlighted province or region, locate it, recall a capital, and name the province or region from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Covers 31 mainland divisions plus Hong Kong and Macau. Taiwan is studied separately in Countries of the World. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "china"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/provinces-and-regions-of-china.json",
+   "bytes": 2239532,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::Provinces and Regions of China"
+    ],
+    "items": 33,
+    "cardTypes": {
+     "region-map": 33
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Anhui",
+     "Beijing",
+     "Chongqing"
+    ]
+   }
+  },
+  {
+   "id": "provinces-and-territories-of-canada",
+   "kind": "deck",
+   "name": "Provinces and Territories of Canada",
+   "description": "13 divisions. Four exercises: name the highlighted province or territory, locate it, recall a capital, and name the province or territory from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "canada"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/provinces-and-territories-of-canada.json",
+   "bytes": 2217312,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::Provinces and Territories of Canada"
+    ],
+    "items": 13,
+    "cardTypes": {
+     "region-map": 13
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Alberta",
+     "British Columbia",
+     "Manitoba"
+    ]
+   }
+  },
+  {
+   "id": "provinces-of-south-africa",
+   "kind": "deck",
+   "name": "Provinces of South Africa",
+   "description": "9 divisions. Four exercises: name the highlighted province, locate it, recall a capital, and name the province from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "south-africa"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/provinces-of-south-africa.json",
+   "bytes": 2212689,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::Provinces of South Africa"
+    ],
+    "items": 9,
+    "cardTypes": {
+     "region-map": 9
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Eastern Cape",
+     "Free State",
+     "Gauteng"
+    ]
+   }
+  },
+  {
+   "id": "regions-of-france",
+   "kind": "deck",
+   "name": "Regions of France",
+   "description": "18 divisions. Four exercises: name the highlighted region, locate it, recall a capital, and name the region from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. The five overseas regions are shown as enlarged insets below metropolitan France. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "france"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/regions-of-france.json",
+   "bytes": 2222679,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::Regions of France"
+    ],
+    "items": 18,
+    "cardTypes": {
+     "region-map": 18
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Auvergne-Rhône-Alpes",
+     "Bourgogne-Franche-Comté",
+     "Bretagne"
+    ]
+   }
+  },
+  {
+   "id": "regions-of-italy",
+   "kind": "deck",
+   "name": "Regions of Italy",
+   "description": "20 divisions. Four exercises: name the highlighted region, locate it, recall a capital, and name the region from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "italy"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/regions-of-italy.json",
+   "bytes": 2224118,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::Regions of Italy"
+    ],
+    "items": 20,
+    "cardTypes": {
+     "region-map": 20
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Abruzzo",
+     "Basilicata",
+     "Calabria"
+    ]
+   }
+  },
+  {
+   "id": "states-and-territories-of-australia",
+   "kind": "deck",
+   "name": "States and Territories of Australia",
+   "description": "8 divisions. Four exercises: name the highlighted state or territory, locate it, recall a capital, and name the state or territory from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "australia"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/states-and-territories-of-australia.json",
+   "bytes": 2211701,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::States and Territories of Australia"
+    ],
+    "items": 8,
+    "cardTypes": {
+     "region-map": 8
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Australian Capital Territory",
+     "New South Wales",
+     "Northern Territory"
+    ]
+   }
+  },
+  {
+   "id": "states-and-territories-of-india",
+   "kind": "deck",
+   "name": "States and Territories of India",
+   "description": "36 divisions. Four exercises: name the highlighted state or union territory, locate it, recall a capital, and name the state or union territory from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "india"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/states-and-territories-of-india.json",
+   "bytes": 2241850,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::States and Territories of India"
+    ],
+    "items": 36,
+    "cardTypes": {
+     "region-map": 36
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Andaman and Nicobar Islands",
+     "Andhra Pradesh",
+     "Arunachal Pradesh"
+    ]
+   }
+  },
+  {
+   "id": "states-of-brazil",
+   "kind": "deck",
+   "name": "States of Brazil",
+   "description": "27 divisions. Four exercises: name the highlighted state, locate it, recall a capital, and name the state from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "brazil"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/states-of-brazil.json",
+   "bytes": 2232547,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::States of Brazil"
+    ],
+    "items": 27,
+    "cardTypes": {
+     "region-map": 27
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Acre",
+     "Alagoas",
+     "Amapá"
+    ]
+   }
+  },
+  {
+   "id": "states-of-mexico",
+   "kind": "deck",
+   "name": "States of Mexico",
+   "description": "32 divisions. Four exercises: name the highlighted state, locate it, recall a capital, and name the state from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "mexico"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/states-of-mexico.json",
+   "bytes": 2236966,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::States of Mexico"
+    ],
+    "items": 32,
+    "cardTypes": {
+     "region-map": 32
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Aguascalientes",
+     "Baja California",
+     "Baja California Sur"
+    ]
+   }
+  },
+  {
+   "id": "states-of-the-united-states",
+   "kind": "deck",
+   "name": "States of the United States",
+   "description": "51 divisions. Four exercises: name the highlighted state, locate it, recall a capital, and name the state from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Alaska and Hawaii are shown as insets at different scales. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
+   "author": "Zibhelina",
+   "tags": [
+    "geography",
+    "states",
+    "regions",
+    "maps",
+    "capitals",
+    "united-states"
+   ],
+   "version": "1",
+   "updated": "2026-10-27",
+   "path": "entries/decks/states-of-the-united-states.json",
+   "bytes": 2259386,
+   "summary": {
+    "decks": [
+     "States and Regions",
+     "States and Regions::States of the United States"
+    ],
+    "items": 51,
+    "cardTypes": {
+     "region-map": 51
+    },
+    "types": [
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Alabama",
+     "Alaska",
+     "Arizona"
+    ]
    }
   },
   {
@@ -478,54 +1019,6 @@
       "--font-mono": "\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", monospace"
      }
     }
-   }
-  },
-  {
-   "id": "countries-of-the-world",
-   "kind": "deck",
-   "name": "Countries of the world",
-   "description": "All 197 countries (193 UN members, Vatican City, Palestine, Kosovo and Taiwan), one subdeck per continent: Africa 54, Asia 48, Europe 46, North America 23, Oceania 14, South America 12. Each country is asked two ways on a real map: the country lights up and you type its name, or you get the name and tap it on the map. Zoom and drag around, and small island nations get a dot you can tap. Typos and names in English, Portuguese, Spanish or French count; typing a different country (Niger for Nigeria) doesn't, and the map shows you where that one is. Uses the Country on a map card type, which comes along. Borders from Natural Earth, names from mledoze/countries.",
-   "author": "Zibhelina",
-   "tags": [
-    "geography",
-    "countries",
-    "maps",
-    "world"
-   ],
-   "version": "1",
-   "updated": "2026-10-25",
-   "path": "entries/decks/countries-of-the-world.json",
-   "bytes": 276838,
-   "cover": "covers/decks/countries-of-the-world.webp",
-   "media": [
-    "media/decks/countries-of-the-world/01-canada.webp"
-   ],
-   "summary": {
-    "decks": [
-     "Countries of the World",
-     "Countries of the World::Africa",
-     "Countries of the World::Asia",
-     "Countries of the World::Europe",
-     "Countries of the World::North America",
-     "Countries of the World::Oceania",
-     "Countries of the World::South America"
-    ],
-    "items": 197,
-    "cardTypes": {
-     "country-map": 197
-    },
-    "types": [
-     {
-      "id": "country-map",
-      "name": "Country on a map"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "Algeria",
-     "Angola",
-     "Benin"
-    ]
    }
   },
   {
