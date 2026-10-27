@@ -1,7 +1,7 @@
 name: Check entries
 on:
   pull_request:
-    paths: ["entries/**"]
+    paths: ["entries/**", "media/**", "covers/**"]
   workflow_dispatch:
 jobs:
   check:

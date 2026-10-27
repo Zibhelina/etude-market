@@ -2,7 +2,7 @@ name: Rebuild index
 on:
   push:
     branches: [main]
-    paths: ["entries/**"]
+    paths: ["entries/**", "media/**", "covers/**"]
   workflow_dispatch:
 permissions:
   contents: write
