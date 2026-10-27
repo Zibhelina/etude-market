@@ -1,6 +1,6 @@
 {
   "etude": "market/1",
-  "generated": "2026-10-26T22:27:55.423Z",
+  "generated": "2026-10-27T04:02:13.341Z",
   "repo": "Zibhelina/etude-market",
   "entries": [
     {
@@ -18,8 +18,12 @@
       "version": "1",
       "updated": "2026-10-26",
       "path": "entries/decks/flippy-bit.json",
-      "bytes": 74808,
+      "bytes": 75387,
       "cover": "covers/decks/flippy-bit.webp",
+      "media": [
+        "media/decks/flippy-bit/01-preview.mp4",
+        "media/decks/flippy-bit/02-flippy.webp"
+      ],
       "summary": {
         "decks": [
           "Flippy Bit"
@@ -56,6 +60,9 @@
       "path": "entries/decks/periodic-table.json",
       "bytes": 804829,
       "cover": "covers/decks/periodic-table.webp",
+      "media": [
+        "media/decks/periodic-table/01-find-iron.webp"
+      ],
       "summary": {
         "decks": [
           "Periodic table",
@@ -416,8 +423,11 @@
       "version": "1",
       "updated": "2026-10-25",
       "path": "entries/decks/countries-of-the-world.json",
-      "bytes": 261379,
+      "bytes": 276838,
       "cover": "covers/decks/countries-of-the-world.webp",
+      "media": [
+        "media/decks/countries-of-the-world/01-canada.webp"
+      ],
       "summary": {
         "decks": [
           "Countries of the World",
