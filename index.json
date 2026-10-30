@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-10-27T17:00:46.306Z",
+ "generated": "2026-10-30T06:54:32.318Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -8,7 +8,7 @@
    "kind": "deck",
    "name": "Countries of the World",
    "description": "All 197 countries (193 UN members, Vatican City, Palestine, Kosovo and Taiwan), one subdeck per continent: Africa 54, Asia 48, Europe 46, North America 23, Oceania 14, South America 12. Each country has four exercises: name the highlighted country, find it on the map, recall a capital, and name the country from a capital. Zoom and drag around; small island nations get a dot you can tap. Multilingual names and small typos are accepted. Capitals are marked and labelled on the map after answering, with explanations for unusual capital roles. Includes the updated Country on a map card type. Borders from Natural Earth; country names from mledoze/countries.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "geography",
     "countries",
@@ -19,7 +19,7 @@
    "version": "2",
    "updated": "2026-10-27",
    "path": "entries/decks/countries-of-the-world.json",
-   "bytes": 403504,
+   "bytes": 403521,
    "cover": "covers/decks/countries-of-the-world.webp",
    "media": [
     "media/decks/countries-of-the-world/01-canada.webp"
@@ -57,7 +57,7 @@
    "kind": "deck",
    "name": "Federal Subjects of Russia",
    "description": "83 divisions. Four exercises: name the highlighted federal subject, locate it, recall a capital, and name the federal subject from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Covers the 83 internationally recognized federal subjects; disputed Ukrainian annexations are excluded. Government-seat exceptions are explained after answering. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "geography",
     "states",
@@ -69,7 +69,7 @@
    "version": "1",
    "updated": "2026-10-27",
    "path": "entries/decks/federal-subjects-of-russia.json",
-   "bytes": 2302163,
+   "bytes": 2302180,
    "cover": "covers/decks/federal-subjects-of-russia.webp",
    "summary": {
     "decks": [
@@ -171,7 +171,7 @@
    "kind": "deck",
    "name": "Prefectures of Japan",
    "description": "47 divisions. Four exercises: name the highlighted prefecture, locate it, recall a capital, and name the prefecture from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "geography",
     "states",
@@ -183,7 +183,7 @@
    "version": "1",
    "updated": "2026-10-27",
    "path": "entries/decks/prefectures-of-japan.json",
-   "bytes": 2252161,
+   "bytes": 2252178,
    "cover": "covers/decks/prefectures-of-japan.webp",
    "summary": {
     "decks": [
@@ -213,7 +213,7 @@
    "kind": "deck",
    "name": "Provinces and Regions of China",
    "description": "33 divisions. Four exercises: name the highlighted province or region, locate it, recall a capital, and name the province or region from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Covers 31 mainland divisions plus Hong Kong and Macau. Taiwan is studied separately in Countries of the World. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "geography",
     "states",
@@ -225,7 +225,7 @@
    "version": "1",
    "updated": "2026-10-27",
    "path": "entries/decks/provinces-and-regions-of-china.json",
-   "bytes": 2239532,
+   "bytes": 2239549,
    "cover": "covers/decks/provinces-and-regions-of-china.webp",
    "summary": {
     "decks": [
@@ -255,7 +255,7 @@
    "kind": "deck",
    "name": "States of Brazil",
    "description": "27 divisions. Four exercises: name the highlighted state, locate it, recall a capital, and name the state from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "geography",
     "states",
@@ -267,7 +267,7 @@
    "version": "1",
    "updated": "2026-10-27",
    "path": "entries/decks/states-of-brazil.json",
-   "bytes": 2232547,
+   "bytes": 2232564,
    "cover": "covers/decks/states-of-brazil.webp",
    "summary": {
     "decks": [
@@ -297,7 +297,7 @@
    "kind": "deck",
    "name": "States of the United States",
    "description": "51 divisions. Four exercises: name the highlighted state, locate it, recall a capital, and name the state from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Alaska and Hawaii are shown as insets at different scales. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "geography",
     "states",
@@ -309,7 +309,7 @@
    "version": "1",
    "updated": "2026-10-27",
    "path": "entries/decks/states-of-the-united-states.json",
-   "bytes": 2259386,
+   "bytes": 2259403,
    "cover": "covers/decks/states-of-the-united-states.webp",
    "summary": {
     "decks": [
@@ -339,7 +339,7 @@
    "kind": "deck",
    "name": "Flippy Bit",
    "description": "One card that's a whole arcade game. Invaders fall carrying a hex number (B7, 3C, F0…) and you flip eight bits with the keys 1 to 8 until they spell it, which shoots the invader down. It keeps speeding up until one lands. The deck runs on the drill scheduler, so there's nothing to rate: play as many runs as you want and Stats charts invaders per run, seconds per invader and how clean your flips were. Fun way to make hex to binary automatic. After Q42's Flippy Bit and the Attack of the Hexadecimals from Base 16. Uses the Flippy Bit card type, which comes along.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "binary",
     "hex",
@@ -349,7 +349,7 @@
    "version": "1",
    "updated": "2026-10-26",
    "path": "entries/decks/flippy-bit.json",
-   "bytes": 75387,
+   "bytes": 75404,
    "cover": "covers/decks/flippy-bit.webp",
    "media": [
     "media/decks/flippy-bit/01-preview.mp4",
@@ -380,7 +380,7 @@
    "kind": "deck",
    "name": "Periodic table",
    "description": "All 118 elements, each asked eight ways, one subdeck per way: type the symbol, type the name, tap its cell on a blank table, name a lit-up cell, give its atomic number, period and group, its atomic mass, its family and block, and write its electron configuration. Every answer ends on the element's tile and its place in the coloured table, so the table builds itself in your head as you go. Uses the Element card type, which comes along. Data from PubChem.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "chemistry",
     "periodic-table",
@@ -389,7 +389,7 @@
    "version": "1",
    "updated": "2026-10-26",
    "path": "entries/decks/periodic-table.json",
-   "bytes": 804829,
+   "bytes": 804846,
    "cover": "covers/decks/periodic-table.webp",
    "media": [
     "media/decks/periodic-table/01-find-iron.webp"
@@ -429,7 +429,7 @@
    "kind": "type",
    "name": "Build the chord",
    "description": "Play a chord on a two-octave piano. A new root and quality every review; any voicing or inversion counts, graded by pitch classes.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "music",
     "piano"
@@ -437,7 +437,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/types/piano-chord.json",
-   "bytes": 23357,
+   "bytes": 23374,
    "cover": "covers/types/piano-chord.webp",
    "summary": {
     "types": [
@@ -464,7 +464,7 @@
    "kind": "theme",
    "name": "Catppuccin Frappé",
    "description": "The softest dark Catppuccin: muted pastels on a dusky blue-grey base, with a mauve accent. Palette by Catppuccin (catppuccin.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "catppuccin",
     "pastel",
@@ -473,7 +473,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/catppuccin-frappe.json",
-   "bytes": 2161,
+   "bytes": 2178,
    "summary": {
     "theme": {
      "id": "catppuccin-frappe",
@@ -534,7 +534,7 @@
    "kind": "theme",
    "name": "Catppuccin Latte",
    "description": "Catppuccin's light flavor: crisp pastels on a cool off-white base, with a mauve accent. Palette by Catppuccin (catppuccin.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "catppuccin",
     "pastel",
@@ -543,7 +543,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/catppuccin-latte.json",
-   "bytes": 2155,
+   "bytes": 2172,
    "summary": {
     "theme": {
      "id": "catppuccin-latte",
@@ -604,7 +604,7 @@
    "kind": "theme",
    "name": "Catppuccin Macchiato",
    "description": "Catppuccin's middle dark flavor: pastels on a slate-blue base, with a mauve accent. Palette by Catppuccin (catppuccin.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "catppuccin",
     "pastel",
@@ -613,7 +613,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/catppuccin-macchiato.json",
-   "bytes": 2164,
+   "bytes": 2181,
    "summary": {
     "theme": {
      "id": "catppuccin-macchiato",
@@ -674,7 +674,7 @@
    "kind": "theme",
    "name": "Catppuccin Mocha",
    "description": "The darkest Catppuccin: soothing pastels on a deep mocha base, with a mauve accent. Palette by Catppuccin (catppuccin.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "catppuccin",
     "pastel",
@@ -683,7 +683,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/catppuccin-mocha.json",
-   "bytes": 2148,
+   "bytes": 2165,
    "summary": {
     "theme": {
      "id": "catppuccin-mocha",
@@ -744,7 +744,7 @@
    "kind": "theme",
    "name": "Dracula",
    "description": "The classic vampire palette: dark violet-grey with vivid purple, pink and green. Palette by Zeno Rocha (draculatheme.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "dracula",
     "purple",
@@ -754,7 +754,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/dracula.json",
-   "bytes": 2121,
+   "bytes": 2138,
    "summary": {
     "theme": {
      "id": "dracula",
@@ -815,7 +815,7 @@
    "kind": "deck",
    "name": "Etude Showcase",
    "description": "A tour of what Etude cards can be: one card for each of 27 card types (chess, chords, kanji drawing, regex, typing tests...). It's a Watch deck: press Show an answer to see each one answered and graded.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "tour",
     "demo"
@@ -823,7 +823,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/decks/etude-showcase.json",
-   "bytes": 363775,
+   "bytes": 363792,
    "cover": "covers/decks/etude-showcase.webp",
    "summary": {
     "decks": [
@@ -944,7 +944,7 @@
    "kind": "theme",
    "name": "Everforest Dark",
    "description": "Green-based and warm, made to be easy on the eyes for long sessions, like a forest at dusk. Palette by sainnhe (Everforest), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "everforest",
     "green",
@@ -954,7 +954,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/everforest-dark.json",
-   "bytes": 2156,
+   "bytes": 2173,
    "summary": {
     "theme": {
      "id": "everforest-dark",
@@ -1015,7 +1015,7 @@
    "kind": "theme",
    "name": "Everforest Light",
    "description": "Everforest by day: warm parchment with soft greens. Palette by sainnhe (Everforest), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "everforest",
     "green",
@@ -1025,7 +1025,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/everforest-light.json",
-   "bytes": 2123,
+   "bytes": 2140,
    "summary": {
     "theme": {
      "id": "everforest-light",
@@ -1086,7 +1086,7 @@
    "kind": "theme",
    "name": "Gruvbox Dark",
    "description": "Retro groove: warm earthy browns with bright orange, yellow and olive. Palette by Pavel Pertsev (morhetz/gruvbox), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "gruvbox",
     "retro",
@@ -1096,7 +1096,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/gruvbox-dark.json",
-   "bytes": 2131,
+   "bytes": 2148,
    "summary": {
     "theme": {
      "id": "gruvbox-dark",
@@ -1157,7 +1157,7 @@
    "kind": "theme",
    "name": "Gruvbox Light",
    "description": "Gruvbox on cream paper: sepia, rust and deep olive. Palette by Pavel Pertsev (morhetz/gruvbox), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "gruvbox",
     "retro",
@@ -1167,7 +1167,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/gruvbox-light.json",
-   "bytes": 2119,
+   "bytes": 2136,
    "summary": {
     "theme": {
      "id": "gruvbox-light",
@@ -1228,7 +1228,7 @@
    "kind": "theme",
    "name": "Kanagawa",
    "description": "Inspired by Hokusai's The Great Wave off Kanagawa: sumi ink with wave blue and washi white. Palette by rebelot (kanagawa.nvim), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "kanagawa",
     "japanese",
@@ -1238,7 +1238,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/kanagawa.json",
-   "bytes": 2131,
+   "bytes": 2148,
    "summary": {
     "theme": {
      "id": "kanagawa",
@@ -1299,7 +1299,7 @@
    "kind": "theme",
    "name": "Manuscript",
    "description": "Cream paper, ink-blue text and a red-pen accent, set in Computer Modern. For long reading sessions and math-heavy decks.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "light",
     "serif",
@@ -1308,7 +1308,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/manuscript.json",
-   "bytes": 2611,
+   "bytes": 2628,
    "summary": {
     "theme": {
      "id": "manuscript",
@@ -1370,7 +1370,7 @@
    "kind": "type",
    "name": "Mate in one",
    "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "chess",
     "games"
@@ -1378,7 +1378,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/types/chess-move.json",
-   "bytes": 27722,
+   "bytes": 27739,
    "cover": "covers/types/chess-move.webp",
    "summary": {
     "types": [
@@ -1407,7 +1407,7 @@
    "kind": "deck",
    "name": "Morse code",
    "description": "Every character with a Morse code: A to Z, 0 to 9, punctuation, prosigns like SOS and SK, and accented letters, 94 cards with a memory hook each. Uses the Morse code card type, which comes along.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "morse",
     "radio",
@@ -1416,7 +1416,7 @@
    "version": "2",
    "updated": "2026-10-25",
    "path": "entries/decks/morse-code-letters.json",
-   "bytes": 48216,
+   "bytes": 48233,
    "cover": "covers/decks/morse-code-letters.webp",
    "summary": {
     "decks": [
@@ -1450,14 +1450,14 @@
    "kind": "type",
    "name": "Morse code",
    "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "morse"
    ],
    "version": "2",
    "updated": "2026-10-25",
    "path": "entries/types/morse-code.json",
-   "bytes": 11390,
+   "bytes": 11407,
    "cover": "covers/types/morse-code.webp",
    "summary": {
     "types": [
@@ -1488,7 +1488,7 @@
    "kind": "theme",
    "name": "Nocturne",
    "description": "Deep indigo night with a soft violet accent. Easier on the eyes than pure black at 2am.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "dark",
     "purple"
@@ -1496,7 +1496,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/nocturne.json",
-   "bytes": 2472,
+   "bytes": 2489,
    "summary": {
     "theme": {
      "id": "nocturne",
@@ -1558,7 +1558,7 @@
    "kind": "theme",
    "name": "Nord",
    "description": "An arctic, north-bluish palette: calm polar night greys with frost blues. Palette by Arctic Ice Studio (nordtheme.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "nord",
     "arctic",
@@ -1568,7 +1568,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/nord.json",
-   "bytes": 2102,
+   "bytes": 2119,
    "summary": {
     "theme": {
      "id": "nord",
@@ -1629,7 +1629,7 @@
    "kind": "theme",
    "name": "One Dark",
    "description": "Atom's iconic dark theme: cool grey with soft, balanced syntax colours. Palette from Atom's One Dark, MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "atom",
     "classic",
@@ -1638,7 +1638,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/one-dark.json",
-   "bytes": 2089,
+   "bytes": 2106,
    "summary": {
     "theme": {
      "id": "one-dark",
@@ -1699,7 +1699,7 @@
    "kind": "theme",
    "name": "Rosé Pine",
    "description": "All natural pine, faux fur and a bit of soho vibes: deep violet with rose and gold. Palette by Rosé Pine (rosepinetheme.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "rose-pine",
     "muted",
@@ -1709,7 +1709,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/rose-pine.json",
-   "bytes": 2135,
+   "bytes": 2152,
    "summary": {
     "theme": {
      "id": "rose-pine",
@@ -1770,7 +1770,7 @@
    "kind": "theme",
    "name": "Rosé Pine Dawn",
    "description": "Rosé Pine at dawn: warm linen with rose, pine and iris. Palette by Rosé Pine (rosepinetheme.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "rose-pine",
     "muted",
@@ -1780,7 +1780,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/rose-pine-dawn.json",
-   "bytes": 2131,
+   "bytes": 2148,
    "summary": {
     "theme": {
      "id": "rose-pine-dawn",
@@ -1841,7 +1841,7 @@
    "kind": "theme",
    "name": "Rosé Pine Moon",
    "description": "Rosé Pine by moonlight: a softer twilight violet. Palette by Rosé Pine (rosepinetheme.com), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "rose-pine",
     "muted",
@@ -1851,7 +1851,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/rose-pine-moon.json",
-   "bytes": 2122,
+   "bytes": 2139,
    "summary": {
     "theme": {
      "id": "rose-pine-moon",
@@ -1912,7 +1912,7 @@
    "kind": "theme",
    "name": "Solarized Dark",
    "description": "Ethan Schoonover's precision palette, built on fixed lightness relationships: deep teal. Palette by Ethan Schoonover (Solarized), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "solarized",
     "classic",
@@ -1921,7 +1921,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/solarized-dark.json",
-   "bytes": 2146,
+   "bytes": 2163,
    "summary": {
     "theme": {
      "id": "solarized-dark",
@@ -1982,7 +1982,7 @@
    "kind": "theme",
    "name": "Solarized Light",
    "description": "Solarized on its own cream: the same accents, flipped base. Palette by Ethan Schoonover (Solarized), MIT.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "solarized",
     "classic",
@@ -1991,7 +1991,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/solarized-light.json",
-   "bytes": 2124,
+   "bytes": 2141,
    "summary": {
     "theme": {
      "id": "solarized-light",
@@ -2052,7 +2052,7 @@
    "kind": "theme",
    "name": "Tokyo Night",
    "description": "The lights of downtown Tokyo at night: deep navy with neon blue and magenta. Palette by enkia and folke (Tokyo Night), MIT / Apache-2.0.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "tokyo-night",
     "blue",
@@ -2062,7 +2062,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/tokyo-night.json",
-   "bytes": 2147,
+   "bytes": 2164,
    "summary": {
     "theme": {
      "id": "tokyo-night",
@@ -2123,7 +2123,7 @@
    "kind": "theme",
    "name": "Tokyo Night Day",
    "description": "Tokyo Night in daylight: cool grey with ink-blue text. Palette by enkia and folke (Tokyo Night), MIT / Apache-2.0.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "tokyo-night",
     "blue",
@@ -2132,7 +2132,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/tokyo-night-day.json",
-   "bytes": 2132,
+   "bytes": 2149,
    "summary": {
     "theme": {
      "id": "tokyo-night-day",
@@ -2193,7 +2193,7 @@
    "kind": "theme",
    "name": "Tokyo Night Storm",
    "description": "Tokyo Night under storm clouds: a lighter slate-navy with a violet accent. Palette by enkia and folke (Tokyo Night), MIT / Apache-2.0.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "tokyo-night",
     "blue",
@@ -2202,7 +2202,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/themes/tokyo-night-storm.json",
-   "bytes": 2157,
+   "bytes": 2174,
    "summary": {
     "theme": {
      "id": "tokyo-night-storm",
@@ -2263,7 +2263,7 @@
    "kind": "type",
    "name": "Type fast",
    "description": "A Monkeytype-style typing test: common words, your own word list or a passage, by word count or timed. Graded by WPM against a target.",
-   "author": "Zibhelina",
+   "author": "Joao Henrique Costa Araujo",
    "tags": [
     "typing",
     "speed"
@@ -2271,7 +2271,7 @@
    "version": "1",
    "updated": "2026-10-25",
    "path": "entries/types/typing-test.json",
-   "bytes": 35361,
+   "bytes": 35378,
    "cover": "covers/types/typing-test.webp",
    "summary": {
     "types": [

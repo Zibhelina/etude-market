@@ -4,7 +4,7 @@
   "id": "morse-code-letters",
   "name": "Morse code",
   "description": "Every character with a Morse code: A to Z, 0 to 9, punctuation, prosigns like SOS and SK, and accented letters, 94 cards with a memory hook each. Uses the Morse code card type, which comes along.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "morse",
     "radio",

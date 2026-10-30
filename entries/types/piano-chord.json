@@ -4,7 +4,7 @@
   "id": "piano-chord",
   "name": "Build the chord",
   "description": "Play a chord on a two-octave piano. A new root and quality every review; any voicing or inversion counts, graded by pitch classes.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "music",
     "piano"

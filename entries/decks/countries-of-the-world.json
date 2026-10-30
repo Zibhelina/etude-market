@@ -4,7 +4,7 @@
   "id": "countries-of-the-world",
   "name": "Countries of the World",
   "description": "All 197 countries (193 UN members, Vatican City, Palestine, Kosovo and Taiwan), one subdeck per continent: Africa 54, Asia 48, Europe 46, North America 23, Oceania 14, South America 12. Each country has four exercises: name the highlighted country, find it on the map, recall a capital, and name the country from a capital. Zoom and drag around; small island nations get a dot you can tap. Multilingual names and small typos are accepted. Capitals are marked and labelled on the map after answering, with explanations for unusual capital roles. Includes the updated Country on a map card type. Borders from Natural Earth; country names from mledoze/countries.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "geography",
     "countries",

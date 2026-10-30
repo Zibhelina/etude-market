@@ -4,7 +4,7 @@
   "id": "chess-move",
   "name": "Mate in one",
   "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "chess",
     "games"

@@ -4,7 +4,7 @@
   "id": "typing-test",
   "name": "Type fast",
   "description": "A Monkeytype-style typing test: common words, your own word list or a passage, by word count or timed. Graded by WPM against a target.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "typing",
     "speed"

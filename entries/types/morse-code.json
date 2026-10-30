@@ -4,7 +4,7 @@
   "id": "morse-code",
   "name": "Morse code",
   "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "morse"
   ],

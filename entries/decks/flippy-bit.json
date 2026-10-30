@@ -4,7 +4,7 @@
   "id": "flippy-bit",
   "name": "Flippy Bit",
   "description": "One card that's a whole arcade game. Invaders fall carrying a hex number (B7, 3C, F0…) and you flip eight bits with the keys 1 to 8 until they spell it, which shoots the invader down. It keeps speeding up until one lands. The deck runs on the drill scheduler, so there's nothing to rate: play as many runs as you want and Stats charts invaders per run, seconds per invader and how clean your flips were. Fun way to make hex to binary automatic. After Q42's Flippy Bit and the Attack of the Hexadecimals from Base 16. Uses the Flippy Bit card type, which comes along.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "binary",
     "hex",

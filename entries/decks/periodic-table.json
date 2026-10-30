@@ -4,7 +4,7 @@
   "id": "periodic-table",
   "name": "Periodic table",
   "description": "All 118 elements, each asked eight ways, one subdeck per way: type the symbol, type the name, tap its cell on a blank table, name a lit-up cell, give its atomic number, period and group, its atomic mass, its family and block, and write its electron configuration. Every answer ends on the element's tile and its place in the coloured table, so the table builds itself in your head as you go. Uses the Element card type, which comes along. Data from PubChem.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "chemistry",
     "periodic-table",

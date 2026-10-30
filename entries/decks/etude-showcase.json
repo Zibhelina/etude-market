@@ -4,7 +4,7 @@
   "id": "etude-showcase",
   "name": "Etude Showcase",
   "description": "A tour of what Etude cards can be: one card for each of 27 card types (chess, chords, kanji drawing, regex, typing tests...). It's a Watch deck: press Show an answer to see each one answered and graded.",
-  "author": "Zibhelina",
+  "author": "Joao Henrique Costa Araujo",
   "tags": [
     "tour",
     "demo"
