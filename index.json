@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-10-30T18:54:51.575Z",
+ "generated": "2026-10-30T19:58:04.178Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -85,6 +85,85 @@
      "Play this triad in root position.",
      "Play this triad in first inversion.",
      "Play this triad in second inversion."
+    ]
+   }
+  },
+  {
+   "id": "flippy-bit",
+   "kind": "deck",
+   "name": "Flippy Bit",
+   "description": "One card that's a whole arcade game. Invaders fall carrying a hex number (B7, 3C, F0…) and you flip eight bits with the keys 1 to 8 until they spell it, which shoots the invader down. It keeps speeding up until one lands. The deck runs on the drill scheduler, so there's nothing to rate: play as many runs as you want and Stats charts invaders per run, seconds per invader and how clean your flips were. Fun way to make hex to binary automatic. Uses the Flippy Bit card type, which comes along.\n\nInspired by Q42's Flippy Bit and the Attack of the Hexadecimals from Base 16: https://flippybitandtheattackofthehexadecimalsfrombase16.com/",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "binary",
+    "hex",
+    "game",
+    "computer science"
+   ],
+   "version": "2",
+   "updated": "2026-10-28",
+   "path": "entries/decks/flippy-bit.json",
+   "bytes": 75568,
+   "cover": "covers/decks/flippy-bit.webp",
+   "media": [
+    "media/decks/flippy-bit/01-preview.mp4",
+    "media/decks/flippy-bit/02-flippy.webp"
+   ],
+   "summary": {
+    "decks": [
+     "Flippy Bit"
+    ],
+    "items": 1,
+    "cardTypes": {
+     "flippy": 1
+    },
+    "types": [
+     {
+      "id": "flippy",
+      "name": "Flippy Bit"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Hex invaders incoming. No tutorial."
+    ]
+   }
+  },
+  {
+   "id": "typing-test",
+   "kind": "type",
+   "name": "Type fast",
+   "description": "A Monkeytype-style typing test: common words, your own word list or a passage, by word count or timed. Graded by WPM against a target.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "typing",
+    "speed"
+   ],
+   "version": "2",
+   "updated": "2026-10-28",
+   "path": "entries/types/typing-test.json",
+   "bytes": 35408,
+   "cover": "covers/types/typing-test.webp",
+   "summary": {
+    "types": [
+     {
+      "id": "typing",
+      "name": "Type fast",
+      "description": "A typing test in the style of Monkeytype: common words, your own word list or a passage, by word count or against the clock. The clock starts on the first key and the result is your WPM. Score = WPM ÷ target.",
+      "grader": "script",
+      "fields": [
+       "note",
+       "text",
+       "wordlist",
+       "count",
+       "seconds",
+       "target"
+      ]
+     }
+    ],
+    "items": 1,
+    "samples": [
+     "25 of the most common English words. The clock starts on your first key."
     ]
    }
   },
@@ -416,47 +495,6 @@
      "Alabama",
      "Alaska",
      "Arizona"
-    ]
-   }
-  },
-  {
-   "id": "flippy-bit",
-   "kind": "deck",
-   "name": "Flippy Bit",
-   "description": "One card that's a whole arcade game. Invaders fall carrying a hex number (B7, 3C, F0…) and you flip eight bits with the keys 1 to 8 until they spell it, which shoots the invader down. It keeps speeding up until one lands. The deck runs on the drill scheduler, so there's nothing to rate: play as many runs as you want and Stats charts invaders per run, seconds per invader and how clean your flips were. Fun way to make hex to binary automatic. Uses the Flippy Bit card type, which comes along.\n\nInspired by Q42's Flippy Bit and the Attack of the Hexadecimals from Base 16: https://flippybitandtheattackofthehexadecimalsfrombase16.com/",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "binary",
-    "hex",
-    "game",
-    "computer science"
-   ],
-   "version": "1",
-   "updated": "2026-10-26",
-   "path": "entries/decks/flippy-bit.json",
-   "bytes": 75475,
-   "cover": "covers/decks/flippy-bit.webp",
-   "media": [
-    "media/decks/flippy-bit/01-preview.mp4",
-    "media/decks/flippy-bit/02-flippy.webp"
-   ],
-   "summary": {
-    "decks": [
-     "Flippy Bit"
-    ],
-    "items": 1,
-    "cardTypes": {
-     "flippy": 1
-    },
-    "types": [
-     {
-      "id": "flippy",
-      "name": "Flippy Bit"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "Hex invaders incoming. No tutorial."
     ]
    }
   },
@@ -2341,44 +2379,6 @@
       "--font-mono": "\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", monospace"
      }
     }
-   }
-  },
-  {
-   "id": "typing-test",
-   "kind": "type",
-   "name": "Type fast",
-   "description": "A Monkeytype-style typing test: common words, your own word list or a passage, by word count or timed. Graded by WPM against a target.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "typing",
-    "speed"
-   ],
-   "version": "1",
-   "updated": "2026-10-25",
-   "path": "entries/types/typing-test.json",
-   "bytes": 35378,
-   "cover": "covers/types/typing-test.webp",
-   "summary": {
-    "types": [
-     {
-      "id": "typing",
-      "name": "Type fast",
-      "description": "A typing test in the style of Monkeytype: common words, your own word list or a passage, by word count or against the clock. The clock starts on the first key and the result is your WPM. Score = WPM ÷ target.",
-      "grader": "script",
-      "fields": [
-       "note",
-       "text",
-       "wordlist",
-       "count",
-       "seconds",
-       "target"
-      ]
-     }
-    ],
-    "items": 1,
-    "samples": [
-     "25 of the most common English words. The clock starts on your first key."
-    ]
    }
   }
  ]
