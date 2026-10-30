@@ -11,8 +11,8 @@
     "game",
     "computer science"
   ],
-  "version": "1",
-  "updated": "2026-10-26",
+  "version": "2",
+  "updated": "2026-10-28",
   "content": {
     "etude": "pack/1",
     "name": "Flippy Bit",
@@ -108,7 +108,11 @@
             "better": "higher",
             "digits": 0
           }
-        ]
+        ],
+        "scheduler": "drill",
+        "schedulerOptions": {
+          "perDay": 0
+        }
       }
     ],
     "items": [
