@@ -1,8 +1,92 @@
 {
  "etude": "market/1",
- "generated": "2026-10-30T07:00:18.690Z",
+ "generated": "2026-10-30T18:43:14.460Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
+  {
+   "id": "piano",
+   "kind": "deck",
+   "name": "Piano: chords, scales and the circle of fifths",
+   "description": "Learn piano chords and scales key by key, walking the circle of fifths: major and minor triads, their inversions, suspended, diminished and augmented triads, seventh chords in every inversion, then major, minor, pentatonic and blues scales, plus an interactive circle of fifths to explore, quiz and race against the clock. Each card shows a chord or scale and you play it on a two-octave keyboard; inversions require the right bass note and scales are played in order. Made by Stefano Zucchini (github.com/Stefz29), shared under AGPL-3.0.",
+   "author": "Stefano Zucchini",
+   "tags": [
+    "piano",
+    "music",
+    "chords",
+    "scales",
+    "music-theory"
+   ],
+   "version": "1",
+   "updated": "2026-10-30",
+   "path": "entries/decks/piano.json",
+   "bytes": 360496,
+   "summary": {
+    "decks": [
+     "Piano",
+     "Piano::1 Triads",
+     "Piano::2 Seventh chords",
+     "Piano::3 Scales",
+     "Piano::4 Circle of fifths",
+     "Piano::4 Circle of fifths::Memory run",
+     "Piano::5 Name the chord",
+     "Piano::6 Ear training",
+     "Piano::7 Chords in a key",
+     "Piano::8 Progressions",
+     "Piano::9 Key signatures"
+    ],
+    "items": 356,
+    "cardTypes": {
+     "piano-chord": 108,
+     "piano-scale": 96,
+     "circle-of-fifths": 10,
+     "piano-name-chord": 36,
+     "piano-ear-chord": 5,
+     "piano-key-chord": 48,
+     "piano-progression": 48,
+     "piano-key-signature": 5
+    },
+    "types": [
+     {
+      "id": "circle-of-fifths",
+      "name": "Circle of fifths"
+     },
+     {
+      "id": "piano-chord",
+      "name": "Piano chord"
+     },
+     {
+      "id": "piano-ear-chord",
+      "name": "Piano: hear the chord"
+     },
+     {
+      "id": "piano-key-chord",
+      "name": "Piano: chord of a key"
+     },
+     {
+      "id": "piano-key-signature",
+      "name": "Piano: key signatures"
+     },
+     {
+      "id": "piano-name-chord",
+      "name": "Piano: name the chord"
+     },
+     {
+      "id": "piano-progression",
+      "name": "Piano: chord progression"
+     },
+     {
+      "id": "piano-scale",
+      "name": "Piano scale"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Play this triad in root position.",
+     "Play this triad in first inversion.",
+     "Play this triad in second inversion."
+    ]
+   }
+  },
   {
    "id": "countries-of-the-world",
    "kind": "deck",
