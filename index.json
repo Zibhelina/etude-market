@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-10-30T18:43:14.460Z",
+ "generated": "2026-10-30T18:54:51.575Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -20,6 +20,7 @@
    "updated": "2026-10-30",
    "path": "entries/decks/piano.json",
    "bytes": 360496,
+   "cover": "covers/decks/piano.webp",
    "summary": {
     "decks": [
      "Piano",
