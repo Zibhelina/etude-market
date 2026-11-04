@@ -36,3 +36,7 @@ One JSON file per entry, at `entries/<kind>s/<id>.json`:
 ## Review
 
 Every pull request runs `etude market index --check`, which validates every entry and dry-run imports each deck and type into an empty collection. A maintainer reads the diff and merges; CI then rebuilds `index.json`.
+
+The check and index-generation jobs have read-only repository access and don't keep Git credentials. A separate job publishes only the generated `index.json`, on `main`, with `contents: write`; it runs no Etude code or package install. A manual index run on another branch builds the artifact without publishing it.
+
+Actions are pinned to full commit SHAs. Both workflows use the commit of Etude's `v2.6.0` release, rather than its moving `main`. To update Etude, verify the new release's commit, change both `ref` pins and their version comments together, and validate the full catalog before merging. Workflow changes also run the catalog check; changes to the index workflow rebuild the index after merging.
