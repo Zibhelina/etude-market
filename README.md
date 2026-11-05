@@ -20,6 +20,8 @@ etude market install typing-test
 
 `index.json` lists every entry with a summary. It's rebuilt by CI after each merge, so don't edit it by hand.
 
+`coming-soon.json` is the other way round: written by hand, never touched by CI. It lists decks the Etude team is still making, with their pictures in `covers/coming-soon/` and `media/coming-soon/<id>/`. The app shows them on a Coming soon shelf with nothing to install (and not at all in the iPhone and Android apps). The format is in Etude's [docs/market.md](https://github.com/Zibhelina/etude/blob/main/docs/market.md#coming-soon).
+
 ## Sharing something
 
 From Etude: **Market → Publish**, pick the theme, deck or card type, describe it, and press **Open pull request**. Etude uses your GitHub CLI (`gh auth login`) to fork this repository, add the file and open the pull request.

@@ -1,0 +1,129 @@
+{
+  "etude": "coming-soon/1",
+  "entries": [
+    {
+      "id": "kanji-mage",
+      "kind": "deck",
+      "name": "Kanji Mage",
+      "tagline": "Write kanji in stroke order to cast spells at the monsters coming for you.",
+      "description": "Kanji practice as a spell game. Monsters walk at you down a shrine path, a word shows at the top with its meaning and readings, and you write its kanji with a mouse, a pen or your finger. Each stroke is checked against the real stroke order and direction, and a finished kanji flies off as a spell at the nearest monster.\n\nA wrong stroke flashes red. Miss twice and Etude shows you the next one. Kanji you struggled with come back sooner in the same run, and Stats keeps your monsters per run and your seconds per kanji.\n\nAll 1,026 kanji taught in Japanese elementary school, one run per grade. Stroke data from KanjiVG, meanings and readings from KANJIDIC2.",
+      "tags": [
+        "japanese",
+        "kanji",
+        "writing",
+        "game"
+      ],
+      "facts": [
+        {
+          "value": "1,026",
+          "label": "Kanji"
+        },
+        {
+          "value": "6",
+          "label": "Grades"
+        },
+        {
+          "value": "Pen or finger",
+          "label": "You write with"
+        }
+      ],
+      "parts": [
+        "Grade 1",
+        "Grade 2",
+        "Grade 3",
+        "Grade 4",
+        "Grade 5",
+        "Grade 6"
+      ],
+      "cover": "covers/coming-soon/kanji-mage.webp",
+      "media": [
+        "media/coming-soon/kanji-mage/01-writing.webp",
+        "media/coming-soon/kanji-mage/02-dark.webp"
+      ]
+    },
+    {
+      "id": "logic-puzzles",
+      "kind": "deck",
+      "name": "Logic Puzzles",
+      "tagline": "Nine kinds of hands-on puzzle, and a fresh one every time you review.",
+      "description": "Lights Out, the Tower of Hanoi, water jugs, river crossings, the bridge and torch, knights and knaves, who sits where, logic gates and the fake coin. You drag, tap, pour and weigh. There's nothing to type.\n\nEvery review builds a new puzzle, so what you get better at is the thinking itself. A solver stands behind each one: Etude replays your moves against the rules, scores you by how close you came to the shortest solution, then shows that solution and why it works.\n\nThree levels per kind, from a warm-up to properly hard. Stuck? A hint shows the next good move, for a small cost.",
+      "tags": [
+        "logic",
+        "puzzles",
+        "reasoning",
+        "game"
+      ],
+      "facts": [
+        {
+          "value": "9",
+          "label": "Kinds"
+        },
+        {
+          "value": "3",
+          "label": "Levels each"
+        },
+        {
+          "value": "New",
+          "label": "Every review"
+        }
+      ],
+      "parts": [
+        "Lights Out",
+        "Tower of Hanoi",
+        "Water Jugs",
+        "River Crossing",
+        "Bridge and Torch",
+        "Knights and Knaves",
+        "Who Sits Where",
+        "Logic Gates",
+        "Fake Coin"
+      ],
+      "cover": "covers/coming-soon/logic-puzzles.webp",
+      "media": [
+        "media/coming-soon/logic-puzzles/01-hanoi.webp",
+        "media/coming-soon/logic-puzzles/02-lights-out.webp",
+        "media/coming-soon/logic-puzzles/03-gates-dark.webp"
+      ]
+    },
+    {
+      "id": "human-anatomy-3d",
+      "kind": "deck",
+      "name": "Human Anatomy 3D",
+      "tagline": "The body as real 3D models you turn, zoom and x-ray while you learn the names.",
+      "description": "Bones, muscles, the brain and nerves, the heart and vessels, and the organs, as 3D models you spin with a finger, zoom and x-ray. A card lights up one structure and asks its name, or names one and asks you to find it.\n\nThe checking is forgiving where it should be. Case, accents and left or right don't matter, the common Latin and Portuguese names count, and one typo still gets half credit. Name the structure next door and Etude tells you which one you picked.\n\n643 cards over 46 scenes, made with medical and biology students in mind. Models from BodyParts3D (CC BY 4.0).",
+      "tags": [
+        "anatomy",
+        "medicine",
+        "biology",
+        "3d"
+      ],
+      "facts": [
+        {
+          "value": "643",
+          "label": "Cards"
+        },
+        {
+          "value": "46",
+          "label": "3D scenes"
+        },
+        {
+          "value": "5",
+          "label": "Body systems"
+        }
+      ],
+      "parts": [
+        "Bones",
+        "Muscles",
+        "Nervous system",
+        "Heart and vessels",
+        "Organs"
+      ],
+      "cover": "covers/coming-soon/human-anatomy-3d.webp",
+      "media": [
+        "media/coming-soon/human-anatomy-3d/01-heart.webp",
+        "media/coming-soon/human-anatomy-3d/02-skull.webp",
+        "media/coming-soon/human-anatomy-3d/03-organs-dark.webp"
+      ]
+    }
+  ]
+}
