@@ -1,8 +1,52 @@
 {
  "etude": "market/1",
- "generated": "2026-11-04T21:58:36.060Z",
+ "generated": "2026-11-05T20:02:20.118Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
+  {
+   "id": "chess-move",
+   "kind": "type",
+   "name": "Mate in one",
+   "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "chess",
+    "games"
+   ],
+   "version": "2",
+   "updated": "2026-11-05",
+   "path": "entries/types/chess-move.json",
+   "bytes": 106541,
+   "cover": "covers/types/chess-move.webp",
+   "media": [
+    "media/types/chess-move/01-play.mp4",
+    "media/types/chess-move/02-play.webp",
+    "media/types/chess-move/03-mate.webp",
+    "media/types/chess-move/04-black-to-move.webp"
+   ],
+   "summary": {
+    "types": [
+     {
+      "id": "chess",
+      "name": "Mate in one",
+      "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
+      "grader": "script",
+      "fields": [
+       "prompt",
+       "fen",
+       "answers",
+       "san",
+       "explanation"
+      ]
+     }
+    ],
+    "items": 4,
+    "samples": [
+     "White to play and mate in one.",
+     "Black to play and mate in one."
+    ]
+   }
+  },
   {
    "id": "piano",
    "kind": "deck",
@@ -1486,43 +1530,6 @@
      },
      "base": "paper"
     }
-   }
-  },
-  {
-   "id": "chess-move",
-   "kind": "type",
-   "name": "Mate in one",
-   "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "chess",
-    "games"
-   ],
-   "version": "1",
-   "updated": "2026-10-25",
-   "path": "entries/types/chess-move.json",
-   "bytes": 27739,
-   "cover": "covers/types/chess-move.webp",
-   "summary": {
-    "types": [
-     {
-      "id": "chess",
-      "name": "Mate in one",
-      "description": "Find the checkmating move on a real board: tap a piece and a square, or drag. Every answer is checked against the engine-verified list of mates.",
-      "grader": "script",
-      "fields": [
-       "prompt",
-       "fen",
-       "answers",
-       "san",
-       "explanation"
-      ]
-     }
-    ],
-    "items": 1,
-    "samples": [
-     "White to play and mate in one."
-    ]
    }
   },
   {
