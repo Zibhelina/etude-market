@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-11-20T09:34:04.537Z",
+ "generated": "2026-11-20T09:46:40.249Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -534,6 +534,18 @@
    "path": "entries/plugins/pomodoro.json",
    "bytes": 16452,
    "cover": "covers/plugins/pomodoro.webp",
+   "media": [
+    "media/plugins/pomodoro/01-focus-timer-phone.webp",
+    "media/plugins/pomodoro/01-focus-timer.webp",
+    "media/plugins/pomodoro/02-short-break-phone.webp",
+    "media/plugins/pomodoro/02-short-break.webp",
+    "media/plugins/pomodoro/03-long-break-phone.webp",
+    "media/plugins/pomodoro/03-long-break.webp",
+    "media/plugins/pomodoro/04-your-times-phone.webp",
+    "media/plugins/pomodoro/04-your-times.webp",
+    "media/plugins/pomodoro/05-pill-phone.webp",
+    "media/plugins/pomodoro/05-pill.webp"
+   ],
    "summary": {
     "plugin": {
      "id": "pomodoro",
