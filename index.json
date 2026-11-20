@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-11-20T08:52:56.304Z",
+ "generated": "2026-11-20T09:01:53.152Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -23,12 +23,12 @@
    "bytes": 466129,
    "cover": "covers/decks/chess.webp",
    "media": [
-    "media/decks/chess/01-mate-in-one.webp",
-    "media/decks/chess/02-mate-in-two.webp",
-    "media/decks/chess/03-missed-fork.webp",
-    "media/decks/chess/04-openings.webp",
-    "media/decks/chess/05-rules.webp",
-    "media/decks/chess/06-endgames.webp"
+    "media/decks/chess/01-mate-in-one-phone.webp",
+    "media/decks/chess/02-mate-in-two-phone.webp",
+    "media/decks/chess/03-missed-fork-phone.webp",
+    "media/decks/chess/04-openings-phone.webp",
+    "media/decks/chess/05-rules-phone.webp",
+    "media/decks/chess/06-endgames-phone.webp"
    ],
    "summary": {
     "decks": [
@@ -97,12 +97,12 @@
    "bytes": 2892214,
    "cover": "covers/decks/countries-of-the-world.webp",
    "media": [
-    "media/decks/countries-of-the-world/01-name-the-country.webp",
-    "media/decks/countries-of-the-world/02-find-it-on-the-map.webp",
-    "media/decks/countries-of-the-world/03-capitals.webp",
-    "media/decks/countries-of-the-world/04-states-of-brazil.webp",
-    "media/decks/countries-of-the-world/05-us-state-capitals.webp",
-    "media/decks/countries-of-the-world/06-provinces-of-china.webp"
+    "media/decks/countries-of-the-world/01-name-the-country-phone.webp",
+    "media/decks/countries-of-the-world/02-find-it-on-the-map-phone.webp",
+    "media/decks/countries-of-the-world/03-capitals-phone.webp",
+    "media/decks/countries-of-the-world/04-states-of-brazil-phone.webp",
+    "media/decks/countries-of-the-world/05-us-state-capitals-phone.webp",
+    "media/decks/countries-of-the-world/06-provinces-of-china-phone.webp"
    ],
    "summary": {
     "decks": [
@@ -162,12 +162,12 @@
    "bytes": 6400446,
    "cover": "covers/decks/piano-hero.webp",
    "media": [
-    "media/decks/piano-hero/01-library.webp",
-    "media/decks/piano-hero/02-learn.webp",
-    "media/decks/piano-hero/03-in-rhythm.webp",
-    "media/decks/piano-hero/04-for-real.webp",
-    "media/decks/piano-hero/05-unlock.webp",
-    "media/decks/piano-hero/06-three-stars.webp"
+    "media/decks/piano-hero/01-library-phone.webp",
+    "media/decks/piano-hero/02-learn-phone.webp",
+    "media/decks/piano-hero/03-in-rhythm-phone.webp",
+    "media/decks/piano-hero/04-for-real-phone.webp",
+    "media/decks/piano-hero/05-unlock-phone.webp",
+    "media/decks/piano-hero/06-three-stars-phone.webp"
    ],
    "summary": {
     "decks": [
@@ -242,11 +242,11 @@
    "cover": "covers/types/chess-move.webp",
    "media": [
     "media/types/chess-move/01-preview.mp4",
-    "media/types/chess-move/02-pick-a-piece.webp",
-    "media/types/chess-move/03-smothered-mate.webp",
-    "media/types/chess-move/04-missed-mate.webp",
-    "media/types/chess-move/05-black-to-move.webp",
-    "media/types/chess-move/06-arabian-mate.webp"
+    "media/types/chess-move/02-pick-a-piece-phone.webp",
+    "media/types/chess-move/03-smothered-mate-phone.webp",
+    "media/types/chess-move/04-missed-mate-phone.webp",
+    "media/types/chess-move/05-black-to-move-phone.webp",
+    "media/types/chess-move/06-arabian-mate-phone.webp"
    ],
    "summary": {
     "types": [
@@ -288,12 +288,12 @@
    "bytes": 50440,
    "cover": "covers/decks/morse-code-letters.webp",
    "media": [
-    "media/decks/morse-code-letters/01-tap-it-out.webp",
-    "media/decks/morse-code-letters/02-memory-hook.webp",
-    "media/decks/morse-code-letters/03-wrong-answer.webp",
-    "media/decks/morse-code-letters/04-prosigns.webp",
-    "media/decks/morse-code-letters/05-punctuation.webp",
-    "media/decks/morse-code-letters/06-accented-letters.webp"
+    "media/decks/morse-code-letters/01-tap-it-out-phone.webp",
+    "media/decks/morse-code-letters/02-memory-hook-phone.webp",
+    "media/decks/morse-code-letters/03-wrong-answer-phone.webp",
+    "media/decks/morse-code-letters/04-prosigns-phone.webp",
+    "media/decks/morse-code-letters/05-punctuation-phone.webp",
+    "media/decks/morse-code-letters/06-accented-letters-phone.webp"
    ],
    "summary": {
     "decks": [
@@ -337,11 +337,11 @@
    "bytes": 13614,
    "cover": "covers/types/morse-code.webp",
    "media": [
-    "media/types/morse-code/01-the-key.webp",
-    "media/types/morse-code/02-tapping.webp",
-    "media/types/morse-code/03-checked.webp",
-    "media/types/morse-code/04-one-dot-too-many.webp",
-    "media/types/morse-code/05-prosigns.webp"
+    "media/types/morse-code/01-the-key-phone.webp",
+    "media/types/morse-code/02-tapping-phone.webp",
+    "media/types/morse-code/03-checked-phone.webp",
+    "media/types/morse-code/04-one-dot-too-many-phone.webp",
+    "media/types/morse-code/05-prosigns-phone.webp"
    ],
    "summary": {
     "types": [
@@ -471,10 +471,10 @@
    "cover": "covers/decks/flippy-bit.webp",
    "media": [
     "media/decks/flippy-bit/01-preview.mp4",
-    "media/decks/flippy-bit/02-flip-the-bits.webp",
-    "media/decks/flippy-bit/03-shot-down.webp",
-    "media/decks/flippy-bit/04-game-over.webp",
-    "media/decks/flippy-bit/05-run-stats.webp"
+    "media/decks/flippy-bit/02-flip-the-bits-phone.webp",
+    "media/decks/flippy-bit/03-shot-down-phone.webp",
+    "media/decks/flippy-bit/04-game-over-phone.webp",
+    "media/decks/flippy-bit/05-run-stats-phone.webp"
    ],
    "summary": {
     "decks": [
@@ -512,11 +512,11 @@
    "bytes": 35408,
    "cover": "covers/types/typing-test.webp",
    "media": [
-    "media/types/typing-test/01-type-the-words.webp",
-    "media/types/typing-test/02-results.webp",
-    "media/types/typing-test/03-timed.webp",
-    "media/types/typing-test/04-passage.webp",
-    "media/types/typing-test/05-word-list.webp"
+    "media/types/typing-test/01-type-the-words-phone.webp",
+    "media/types/typing-test/02-results-phone.webp",
+    "media/types/typing-test/03-timed-phone.webp",
+    "media/types/typing-test/04-passage-phone.webp",
+    "media/types/typing-test/05-word-list-phone.webp"
    ],
    "summary": {
     "types": [
@@ -631,12 +631,12 @@
    "bytes": 804846,
    "cover": "covers/decks/periodic-table.webp",
    "media": [
-    "media/decks/periodic-table/01-find-gold.webp",
-    "media/decks/periodic-table/02-name-the-cell.webp",
-    "media/decks/periodic-table/03-symbol-missed.webp",
-    "media/decks/periodic-table/04-family.webp",
-    "media/decks/periodic-table/05-numbers.webp",
-    "media/decks/periodic-table/06-electron-configuration.webp"
+    "media/decks/periodic-table/01-find-gold-phone.webp",
+    "media/decks/periodic-table/02-name-the-cell-phone.webp",
+    "media/decks/periodic-table/03-symbol-missed-phone.webp",
+    "media/decks/periodic-table/04-family-phone.webp",
+    "media/decks/periodic-table/05-numbers-phone.webp",
+    "media/decks/periodic-table/06-electron-configuration-phone.webp"
    ],
    "summary": {
     "decks": [
@@ -684,11 +684,11 @@
    "bytes": 23374,
    "cover": "covers/types/piano-chord.webp",
    "media": [
-    "media/types/piano-chord/01-tap-the-notes.webp",
-    "media/types/piano-chord/02-correct.webp",
-    "media/types/piano-chord/03-sevenths.webp",
-    "media/types/piano-chord/04-wrong-note.webp",
-    "media/types/piano-chord/05-explanation.webp"
+    "media/types/piano-chord/01-tap-the-notes-phone.webp",
+    "media/types/piano-chord/02-correct-phone.webp",
+    "media/types/piano-chord/03-sevenths-phone.webp",
+    "media/types/piano-chord/04-wrong-note-phone.webp",
+    "media/types/piano-chord/05-explanation-phone.webp"
    ],
    "summary": {
     "types": [
@@ -1082,12 +1082,12 @@
    "bytes": 363792,
    "cover": "covers/decks/etude-showcase.webp",
    "media": [
-    "media/decks/etude-showcase/01-chess.webp",
-    "media/decks/etude-showcase/02-chords.webp",
-    "media/decks/etude-showcase/03-balance.webp",
-    "media/decks/etude-showcase/04-regex.webp",
-    "media/decks/etude-showcase/05-graph-walk.webp",
-    "media/decks/etude-showcase/06-color.webp"
+    "media/decks/etude-showcase/01-chess-phone.webp",
+    "media/decks/etude-showcase/02-chords-phone.webp",
+    "media/decks/etude-showcase/03-balance-phone.webp",
+    "media/decks/etude-showcase/04-regex-phone.webp",
+    "media/decks/etude-showcase/05-graph-walk-phone.webp",
+    "media/decks/etude-showcase/06-color-phone.webp"
    ],
    "summary": {
     "decks": [
