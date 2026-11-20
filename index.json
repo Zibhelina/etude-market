@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-11-20T08:42:13.243Z",
+ "generated": "2026-11-20T08:48:29.767Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -184,6 +184,7 @@
    "updated": "2026-11-20",
    "path": "entries/plugins/pomodoro.json",
    "bytes": 16452,
+   "cover": "covers/plugins/pomodoro.webp",
    "summary": {
     "plugin": {
      "id": "pomodoro",
