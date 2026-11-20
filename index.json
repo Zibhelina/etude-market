@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-11-20T07:36:43.785Z",
+ "generated": "2026-11-20T08:02:38.405Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -128,6 +128,43 @@
      "Algeria",
      "Angola",
      "Benin"
+    ]
+   }
+  },
+  {
+   "id": "piano-hero",
+   "kind": "deck",
+   "name": "Piano Hero",
+   "description": "Learn real songs on the piano one short part at a time. The notes fall toward the keys like in a rhythm game, and every part has three steps: Learn waits for each note, In rhythm slows down by itself when you miss, and For real is full speed. A star on a part opens the next one, and once every part has a star you play the whole song. Each song comes in Easy, Medium and Hard (both hands). Play with your computer keyboard or tap the keys. The piano is the Salamander Grand Piano by Alexander Holm (CC BY 3.0).",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "piano",
+    "music",
+    "game",
+    "songs"
+   ],
+   "version": "1",
+   "updated": "2026-11-20",
+   "path": "entries/decks/piano-hero.json",
+   "bytes": 6400446,
+   "cover": "covers/decks/piano-hero.webp",
+   "summary": {
+    "decks": [
+     "Piano Hero"
+    ],
+    "items": 1,
+    "cardTypes": {
+     "piano-hero": 1
+    },
+    "types": [
+     {
+      "id": "piano-hero",
+      "name": "Piano Hero"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Piano Hero"
     ]
    }
   },
