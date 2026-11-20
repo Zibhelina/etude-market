@@ -1,47 +1,126 @@
 {
  "etude": "market/1",
- "generated": "2026-11-06T04:14:42.662Z",
+ "generated": "2026-11-20T06:58:14.186Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
+   "id": "chess",
+   "kind": "deck",
+   "name": "Chess",
+   "description": "A chess course you play on the board, 410 cards from naming squares to rook endgames. Tap or drag your moves. In most puzzles the opponent's last move plays first, then you find the answer; when the line goes on, the opponent replies and you keep going. Any checkmate counts. After answering you can step through the whole line.\n\n1 The board: 4 cards that pick a new square every time, to find or to name, from White's side and from Black's.\n\n2 Rules: 16 multiple-choice questions on castling, en passant, promotion, draws and notation.\n\n3 Mate in one: 60 puzzles.\n\n4 Mate in two: 50 puzzles.\n\n5 Tactics: 175 puzzles, 25 each of fork, pin, skewer, discovered attack, loose pieces, back-rank mate and removing the defender.\n\n6 Endgames: 45. Five king-and-pawn essentials (taking the opposition, stepping aside), each checked on the Lichess tablebase, then 20 pawn and 20 rook endgame puzzles.\n\n7 Openings: 20 lines played from the first move. Twelve openings across both colours (Italian, Ruy Lopez, Scotch, Queen's Gambit Declined and London as White; Sicilian Najdorf, French, Caro-Kann, Scandinavian, King's Indian, Slav and the Queen's Gambit Declined as Black) and eight traps, from Scholar's Mate to the Elephant Trap.\n\n8 Mixed: 40 puzzles with the theme left unnamed, so spotting it is your job.\n\nThe 365 puzzles come from the Lichess puzzle database (database.lichess.org, CC0): popular ones played at least 2,000 times, rated about 600 to 1400, easiest first in each subdeck. Every line was replayed with python-chess before it went in. The board only promotes to a queen, so puzzles that need an underpromotion were left out. The rules questions and the openings were written by hand. The cartoon pieces were drawn for Etude with OpenAI's image model, the same set the Mate in one card type uses.\n\nUses the Chess puzzle card type, which comes along.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "chess",
+    "games",
+    "puzzles",
+    "tactics",
+    "endgames",
+    "openings"
+   ],
+   "version": "1",
+   "updated": "2026-11-20",
+   "path": "entries/decks/chess.json",
+   "bytes": 466129,
+   "cover": "covers/decks/chess.webp",
+   "summary": {
+    "decks": [
+     "Chess",
+     "Chess::1 The board",
+     "Chess::2 Rules",
+     "Chess::3 Mate in one",
+     "Chess::4 Mate in two",
+     "Chess::5 Tactics",
+     "Chess::5 Tactics::1 Fork",
+     "Chess::5 Tactics::2 Pin",
+     "Chess::5 Tactics::3 Skewer",
+     "Chess::5 Tactics::4 Discovered attack",
+     "Chess::5 Tactics::5 Loose pieces",
+     "Chess::5 Tactics::6 Back-rank mate",
+     "Chess::5 Tactics::7 Remove the defender",
+     "Chess::6 Endgames",
+     "Chess::6 Endgames::1 Essentials",
+     "Chess::6 Endgames::2 Pawn endgames",
+     "Chess::6 Endgames::3 Rook endgames",
+     "Chess::7 Openings",
+     "Chess::8 Mixed"
+    ],
+    "items": 410,
+    "cardTypes": {
+     "chess-line": 394,
+     "mcq": 16
+    },
+    "types": [
+     {
+      "id": "chess-line",
+      "name": "Chess puzzle"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "Find e4",
+     "Find f6 (you're Black)",
+     "Name the yellow square."
+    ]
+   }
+  },
+  {
    "id": "countries-of-the-world",
    "kind": "deck",
-   "name": "Countries of the World",
-   "description": "All 197 countries (193 UN members, Vatican City, Palestine, Kosovo and Taiwan), one subdeck per continent: Africa 54, Asia 48, Europe 46, North America 23, Oceania 14, South America 12. Each country has four exercises: name the highlighted country, find it on the map, recall a capital, and name the country from a capital. Zoom and drag around; small island nations get a dot you can tap. Multilingual names and small typos are accepted. Capitals are marked and labelled on the map after answering, with explanations for unusual capital roles. Includes the updated Country on a map card type. Borders from Natural Earth; country names from mledoze/countries.",
+   "name": "Geography",
+   "description": "438 places on real maps, in two decks. Countries of the World has all 197 countries (193 UN members, Vatican City, Palestine, Kosovo and Taiwan), one subdeck per continent: Africa 54, Asia 48, Europe 46, North America 23, Oceania 14, South America 12. States and Regions has 241 more, one subdeck per country: States of Brazil 27, States of the United States 51, Prefectures of Japan 47, Provinces and Regions of China 33, Federal Subjects of Russia 83. Every place is asked four ways: name the highlighted one, find it on the map, recall its capital, and name it from its capital. City divisions skip the capital questions that would answer themselves, and a capital shared by two places gets no reverse card. Zoom and drag around; small island nations get a dot you can tap. Names in several languages count, and the countries forgive small typos. Unusual capitals and seats of government are explained after you answer. Alaska and Hawaii sit in insets. Russia covers the 83 internationally recognized federal subjects, without the disputed Ukrainian annexations; China covers 31 mainland divisions plus Hong Kong and Macau, with Taiwan among the countries. Study the whole planet or only the corner you care about. Includes the Country on a map and Regional map and capitals card types. Borders and multilingual names from Natural Earth; country names from mledoze/countries; capital sources are credited on each item.",
    "author": "Joao Henrique Costa Araujo",
    "tags": [
     "geography",
     "countries",
     "maps",
     "world",
-    "capitals"
+    "capitals",
+    "states",
+    "regions",
+    "brazil",
+    "united-states",
+    "japan",
+    "china",
+    "russia"
    ],
-   "version": "3",
-   "updated": "2026-11-05",
+   "version": "4",
+   "updated": "2026-11-20",
    "path": "entries/decks/countries-of-the-world.json",
-   "bytes": 410163,
+   "bytes": 2892214,
    "cover": "covers/decks/countries-of-the-world.webp",
    "media": [
     "media/decks/countries-of-the-world/01-canada.webp"
    ],
    "summary": {
     "decks": [
-     "Countries of the World",
-     "Countries of the World::Africa",
-     "Countries of the World::Asia",
-     "Countries of the World::Europe",
-     "Countries of the World::North America",
-     "Countries of the World::Oceania",
-     "Countries of the World::South America"
+     "Geography",
+     "Geography::Countries of the World",
+     "Geography::Countries of the World::Africa",
+     "Geography::Countries of the World::Asia",
+     "Geography::Countries of the World::Europe",
+     "Geography::Countries of the World::North America",
+     "Geography::Countries of the World::Oceania",
+     "Geography::Countries of the World::South America",
+     "Geography::States and Regions",
+     "Geography::States and Regions::Federal Subjects of Russia",
+     "Geography::States and Regions::Prefectures of Japan",
+     "Geography::States and Regions::Provinces and Regions of China",
+     "Geography::States and Regions::States of Brazil",
+     "Geography::States and Regions::States of the United States"
     ],
-    "items": 197,
+    "items": 438,
     "cardTypes": {
-     "country-map": 197
+     "country-map": 197,
+     "region-map": 241
     },
     "types": [
      {
       "id": "country-map",
       "name": "Country on a map"
+     },
+     {
+      "id": "region-map",
+      "name": "Regional map and capitals"
      }
     ],
     "watch": false,
@@ -342,48 +421,6 @@
    }
   },
   {
-   "id": "federal-subjects-of-russia",
-   "kind": "deck",
-   "name": "Federal Subjects of Russia",
-   "description": "83 divisions. Four exercises: name the highlighted federal subject, locate it, recall a capital, and name the federal subject from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Covers the 83 internationally recognized federal subjects; disputed Ukrainian annexations are excluded. Government-seat exceptions are explained after answering. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "geography",
-    "states",
-    "regions",
-    "maps",
-    "capitals",
-    "russia"
-   ],
-   "version": "1",
-   "updated": "2026-10-27",
-   "path": "entries/decks/federal-subjects-of-russia.json",
-   "bytes": 2302180,
-   "cover": "covers/decks/federal-subjects-of-russia.webp",
-   "summary": {
-    "decks": [
-     "States and Regions",
-     "States and Regions::Federal Subjects of Russia"
-    ],
-    "items": 83,
-    "cardTypes": {
-     "region-map": 83
-    },
-    "types": [
-     {
-      "id": "region-map",
-      "name": "Regional map and capitals"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "Altai Krai",
-     "Altai Republic",
-     "Amur Oblast"
-    ]
-   }
-  },
-  {
    "id": "osaka-jade",
    "kind": "theme",
    "name": "Osaka Jade",
@@ -453,174 +490,6 @@
      },
      "css": "/*\nMIT License\n\nCopyright (c) 2025 Justin Lowry\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n*/"
     }
-   }
-  },
-  {
-   "id": "prefectures-of-japan",
-   "kind": "deck",
-   "name": "Prefectures of Japan",
-   "description": "47 divisions. Four exercises: name the highlighted prefecture, locate it, recall a capital, and name the prefecture from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "geography",
-    "states",
-    "regions",
-    "maps",
-    "capitals",
-    "japan"
-   ],
-   "version": "1",
-   "updated": "2026-10-27",
-   "path": "entries/decks/prefectures-of-japan.json",
-   "bytes": 2252178,
-   "cover": "covers/decks/prefectures-of-japan.webp",
-   "summary": {
-    "decks": [
-     "States and Regions",
-     "States and Regions::Prefectures of Japan"
-    ],
-    "items": 47,
-    "cardTypes": {
-     "region-map": 47
-    },
-    "types": [
-     {
-      "id": "region-map",
-      "name": "Regional map and capitals"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "Aichi",
-     "Akita",
-     "Aomori"
-    ]
-   }
-  },
-  {
-   "id": "provinces-and-regions-of-china",
-   "kind": "deck",
-   "name": "Provinces and Regions of China",
-   "description": "33 divisions. Four exercises: name the highlighted province or region, locate it, recall a capital, and name the province or region from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Covers 31 mainland divisions plus Hong Kong and Macau. Taiwan is studied separately in Countries of the World. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "geography",
-    "states",
-    "regions",
-    "maps",
-    "capitals",
-    "china"
-   ],
-   "version": "1",
-   "updated": "2026-10-27",
-   "path": "entries/decks/provinces-and-regions-of-china.json",
-   "bytes": 2239549,
-   "cover": "covers/decks/provinces-and-regions-of-china.webp",
-   "summary": {
-    "decks": [
-     "States and Regions",
-     "States and Regions::Provinces and Regions of China"
-    ],
-    "items": 33,
-    "cardTypes": {
-     "region-map": 33
-    },
-    "types": [
-     {
-      "id": "region-map",
-      "name": "Regional map and capitals"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "Anhui",
-     "Beijing",
-     "Chongqing"
-    ]
-   }
-  },
-  {
-   "id": "states-of-brazil",
-   "kind": "deck",
-   "name": "States of Brazil",
-   "description": "27 divisions. Four exercises: name the highlighted state, locate it, recall a capital, and name the state from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "geography",
-    "states",
-    "regions",
-    "maps",
-    "capitals",
-    "brazil"
-   ],
-   "version": "1",
-   "updated": "2026-10-27",
-   "path": "entries/decks/states-of-brazil.json",
-   "bytes": 2232564,
-   "cover": "covers/decks/states-of-brazil.webp",
-   "summary": {
-    "decks": [
-     "States and Regions",
-     "States and Regions::States of Brazil"
-    ],
-    "items": 27,
-    "cardTypes": {
-     "region-map": 27
-    },
-    "types": [
-     {
-      "id": "region-map",
-      "name": "Regional map and capitals"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "Acre",
-     "Alagoas",
-     "Amapá"
-    ]
-   }
-  },
-  {
-   "id": "states-of-the-united-states",
-   "kind": "deck",
-   "name": "States of the United States",
-   "description": "51 divisions. Four exercises: name the highlighted state, locate it, recall a capital, and name the state from its capital. City divisions omit redundant capital faces; ambiguous shared-capital reverse cards are omitted. Alaska and Hawaii are shown as insets at different scales. Includes the Regional map and capitals card type. Borders and multilingual names from Natural Earth; capital sources are credited on each item.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "geography",
-    "states",
-    "regions",
-    "maps",
-    "capitals",
-    "united-states"
-   ],
-   "version": "1",
-   "updated": "2026-10-27",
-   "path": "entries/decks/states-of-the-united-states.json",
-   "bytes": 2259403,
-   "cover": "covers/decks/states-of-the-united-states.webp",
-   "summary": {
-    "decks": [
-     "States and Regions",
-     "States and Regions::States of the United States"
-    ],
-    "items": 51,
-    "cardTypes": {
-     "region-map": 51
-    },
-    "types": [
-     {
-      "id": "region-map",
-      "name": "Regional map and capitals"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "Alabama",
-     "Alaska",
-     "Arizona"
-    ]
    }
   },
   {
