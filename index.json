@@ -1,6 +1,6 @@
 {
  "etude": "market/1",
- "generated": "2026-11-20T09:01:53.152Z",
+ "generated": "2026-11-20T09:11:07.031Z",
  "repo": "Zibhelina/etude-market",
  "entries": [
   {
@@ -68,6 +68,143 @@
      "Find e4",
      "Find f6 (you're Black)",
      "Name the yellow square."
+    ]
+   }
+  },
+  {
+   "id": "etude-showcase",
+   "kind": "deck",
+   "name": "Etude Showcase",
+   "description": "A tour of what Etude cards can be: one card for each of 27 card types (chess, chords, kanji drawing, regex, typing tests...). It's a Watch deck: press Show an answer to see each one answered and graded.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "tour",
+    "demo"
+   ],
+   "version": "2",
+   "updated": "2026-11-20",
+   "path": "entries/decks/etude-showcase.json",
+   "bytes": 363792,
+   "cover": "covers/decks/etude-showcase.webp",
+   "media": [
+    "media/decks/etude-showcase/01-chess-phone.webp",
+    "media/decks/etude-showcase/02-chords-phone.webp",
+    "media/decks/etude-showcase/03-balance-phone.webp",
+    "media/decks/etude-showcase/04-regex-phone.webp",
+    "media/decks/etude-showcase/05-graph-walk-phone.webp",
+    "media/decks/etude-showcase/06-color-phone.webp"
+   ],
+   "summary": {
+    "decks": [
+     "Etude Showcase",
+     "Etude Showcase::1 Recall",
+     "Etude Showcase::2 Calculate",
+     "Etude Showcase::3 Arrange",
+     "Etude Showcase::4 Code",
+     "Etude Showcase::5 Play and listen",
+     "Etude Showcase::6 Draw and write"
+    ],
+    "items": 27,
+    "cardTypes": {
+     "basic": 1,
+     "typed": 1,
+     "mcq": 1,
+     "cloze": 1,
+     "match": 1,
+     "numeric": 1,
+     "math": 1,
+     "estimate": 1,
+     "balance": 1,
+     "unit-circle": 1,
+     "plot": 1,
+     "order": 1,
+     "timeline": 1,
+     "graph-walk": 1,
+     "code": 1,
+     "regex": 1,
+     "bug-hunt": 1,
+     "bits": 1,
+     "chess": 1,
+     "chord": 1,
+     "staff": 1,
+     "interval": 1,
+     "color": 1,
+     "sprint": 1,
+     "typing": 1,
+     "free": 1,
+     "draw": 1
+    },
+    "types": [
+     {
+      "id": "balance",
+      "name": "Balance the equation"
+     },
+     {
+      "id": "bits",
+      "name": "Flip the bits"
+     },
+     {
+      "id": "bug-hunt",
+      "name": "Find the bug"
+     },
+     {
+      "id": "chess",
+      "name": "Mate in one"
+     },
+     {
+      "id": "chord",
+      "name": "Build the chord"
+     },
+     {
+      "id": "color",
+      "name": "Make this color"
+     },
+     {
+      "id": "estimate",
+      "name": "Estimate it"
+     },
+     {
+      "id": "graph-walk",
+      "name": "Visit the nodes"
+     },
+     {
+      "id": "interval",
+      "name": "Name the interval"
+     },
+     {
+      "id": "plot",
+      "name": "Mark the points"
+     },
+     {
+      "id": "regex",
+      "name": "Write the regex"
+     },
+     {
+      "id": "sprint",
+      "name": "Beat the clock"
+     },
+     {
+      "id": "staff",
+      "name": "Read the note"
+     },
+     {
+      "id": "timeline",
+      "name": "Place it in time"
+     },
+     {
+      "id": "typing",
+      "name": "Type fast"
+     },
+     {
+      "id": "unit-circle",
+      "name": "Unit circle"
+     }
+    ],
+    "watch": true,
+    "samples": [
+     "Why is the sky blue?",
+     "What is the capital of Australia?",
+     "Which planet has the shortest day, one full turn on its axis?"
     ]
    }
   },
@@ -141,6 +278,156 @@
      "Algeria",
      "Angola",
      "Benin"
+    ]
+   }
+  },
+  {
+   "id": "morse-code-letters",
+   "kind": "deck",
+   "name": "Morse code",
+   "description": "Every character with a Morse code: A to Z, 0 to 9, punctuation, prosigns like SOS and SK, and accented letters, 94 cards with a memory hook each. Uses the Morse code card type, which comes along.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "morse",
+    "radio",
+    "ham radio"
+   ],
+   "version": "4",
+   "updated": "2026-11-20",
+   "path": "entries/decks/morse-code-letters.json",
+   "bytes": 50644,
+   "cover": "covers/decks/morse-code-letters.webp",
+   "media": [
+    "media/decks/morse-code-letters/01-tap-it-out-phone.webp",
+    "media/decks/morse-code-letters/02-memory-hook-phone.webp",
+    "media/decks/morse-code-letters/03-wrong-answer-phone.webp",
+    "media/decks/morse-code-letters/04-prosigns-phone.webp",
+    "media/decks/morse-code-letters/05-punctuation-phone.webp",
+    "media/decks/morse-code-letters/06-accented-letters-phone.webp"
+   ],
+   "summary": {
+    "decks": [
+     "Morse code",
+     "Morse code::Accented letters",
+     "Morse code::Letters",
+     "Morse code::Numbers",
+     "Morse code::Prosigns",
+     "Morse code::Punctuation"
+    ],
+    "items": 94,
+    "cardTypes": {
+     "morse": 94
+    },
+    "types": [
+     {
+      "id": "morse",
+      "name": "Morse code"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "morse-code",
+   "kind": "type",
+   "name": "Morse code",
+   "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "morse"
+   ],
+   "version": "4",
+   "updated": "2026-11-20",
+   "path": "entries/types/morse-code.json",
+   "bytes": 13818,
+   "cover": "covers/types/morse-code.webp",
+   "media": [
+    "media/types/morse-code/01-the-key-phone.webp",
+    "media/types/morse-code/02-tapping-phone.webp",
+    "media/types/morse-code/03-checked-phone.webp",
+    "media/types/morse-code/04-one-dot-too-many-phone.webp",
+    "media/types/morse-code/05-prosigns-phone.webp"
+   ],
+   "summary": {
+    "types": [
+     {
+      "id": "morse",
+      "name": "Morse code",
+      "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
+      "grader": "script",
+      "fields": [
+       "letter",
+       "name",
+       "prosign",
+       "code",
+       "mnemonic"
+      ]
+     }
+    ],
+    "items": 5,
+    "samples": [
+     "C",
+     "O",
+     "S"
+    ]
+   }
+  },
+  {
+   "id": "periodic-table",
+   "kind": "deck",
+   "name": "Periodic table",
+   "description": "All 118 elements, each asked eight ways, one subdeck per way: type the symbol, type the name, tap its cell on a blank table, name a lit-up cell, give its atomic number, period and group, its atomic mass, its family and block, and write its electron configuration. Every answer ends on the element's tile and its place in the coloured table, so the table builds itself in your head as you go. Uses the Element card type, which comes along. Data from PubChem.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "chemistry",
+    "periodic-table",
+    "science"
+   ],
+   "version": "2",
+   "updated": "2026-11-20",
+   "path": "entries/decks/periodic-table.json",
+   "bytes": 804863,
+   "cover": "covers/decks/periodic-table.webp",
+   "media": [
+    "media/decks/periodic-table/01-find-gold-phone.webp",
+    "media/decks/periodic-table/02-name-the-cell-phone.webp",
+    "media/decks/periodic-table/03-symbol-missed-phone.webp",
+    "media/decks/periodic-table/04-family-phone.webp",
+    "media/decks/periodic-table/05-numbers-phone.webp",
+    "media/decks/periodic-table/06-electron-configuration-phone.webp"
+   ],
+   "summary": {
+    "decks": [
+     "Periodic table",
+     "Periodic table::1 Symbols",
+     "Periodic table::2 Names",
+     "Periodic table::3 Find it on the table",
+     "Periodic table::4 Name the cell",
+     "Periodic table::5 Numbers",
+     "Periodic table::6 Atomic mass",
+     "Periodic table::7 Family and block",
+     "Periodic table::8 Electron configuration"
+    ],
+    "items": 944,
+    "cardTypes": {
+     "element": 944
+    },
+    "types": [
+     {
+      "id": "element",
+      "name": "Element"
+     }
+    ],
+    "watch": false,
+    "samples": [
+     "symbol",
+     "Na comes from the Latin natrium.",
+     "K comes from the Latin kalium."
     ]
    }
   },
@@ -226,6 +513,51 @@
    }
   },
   {
+   "id": "typing-test",
+   "kind": "type",
+   "name": "Type fast",
+   "description": "A Monkeytype-style typing test: common words, your own word list or a passage, by word count or timed. Graded by WPM against a target.",
+   "author": "Joao Henrique Costa Araujo",
+   "tags": [
+    "typing",
+    "speed"
+   ],
+   "version": "3",
+   "updated": "2026-11-20",
+   "path": "entries/types/typing-test.json",
+   "bytes": 35408,
+   "cover": "covers/types/typing-test.webp",
+   "media": [
+    "media/types/typing-test/01-type-the-words-phone.webp",
+    "media/types/typing-test/02-results-phone.webp",
+    "media/types/typing-test/03-timed-phone.webp",
+    "media/types/typing-test/04-passage-phone.webp",
+    "media/types/typing-test/05-word-list-phone.webp"
+   ],
+   "summary": {
+    "types": [
+     {
+      "id": "typing",
+      "name": "Type fast",
+      "description": "A typing test in the style of Monkeytype: common words, your own word list or a passage, by word count or against the clock. The clock starts on the first key and the result is your WPM. Score = WPM ÷ target.",
+      "grader": "script",
+      "fields": [
+       "note",
+       "text",
+       "wordlist",
+       "count",
+       "seconds",
+       "target"
+      ]
+     }
+    ],
+    "items": 1,
+    "samples": [
+     "25 of the most common English words. The clock starts on your first key."
+    ]
+   }
+  },
+  {
    "id": "chess-move",
    "kind": "type",
    "name": "Mate in one",
@@ -268,102 +600,6 @@
     "samples": [
      "White to play and mate in one.",
      "Black to play and mate in one."
-    ]
-   }
-  },
-  {
-   "id": "morse-code-letters",
-   "kind": "deck",
-   "name": "Morse code",
-   "description": "Every character with a Morse code: A to Z, 0 to 9, punctuation, prosigns like SOS and SK, and accented letters, 94 cards with a memory hook each. Uses the Morse code card type, which comes along.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "morse",
-    "radio",
-    "ham radio"
-   ],
-   "version": "3",
-   "updated": "2026-11-05",
-   "path": "entries/decks/morse-code-letters.json",
-   "bytes": 50440,
-   "cover": "covers/decks/morse-code-letters.webp",
-   "media": [
-    "media/decks/morse-code-letters/01-tap-it-out-phone.webp",
-    "media/decks/morse-code-letters/02-memory-hook-phone.webp",
-    "media/decks/morse-code-letters/03-wrong-answer-phone.webp",
-    "media/decks/morse-code-letters/04-prosigns-phone.webp",
-    "media/decks/morse-code-letters/05-punctuation-phone.webp",
-    "media/decks/morse-code-letters/06-accented-letters-phone.webp"
-   ],
-   "summary": {
-    "decks": [
-     "Morse code",
-     "Morse code::Accented letters",
-     "Morse code::Letters",
-     "Morse code::Numbers",
-     "Morse code::Prosigns",
-     "Morse code::Punctuation"
-    ],
-    "items": 94,
-    "cardTypes": {
-     "morse": 94
-    },
-    "types": [
-     {
-      "id": "morse",
-      "name": "Morse code"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "A",
-     "B",
-     "C"
-    ]
-   }
-  },
-  {
-   "id": "morse-code",
-   "kind": "type",
-   "name": "Morse code",
-   "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "morse"
-   ],
-   "version": "3",
-   "updated": "2026-11-05",
-   "path": "entries/types/morse-code.json",
-   "bytes": 13614,
-   "cover": "covers/types/morse-code.webp",
-   "media": [
-    "media/types/morse-code/01-the-key-phone.webp",
-    "media/types/morse-code/02-tapping-phone.webp",
-    "media/types/morse-code/03-checked-phone.webp",
-    "media/types/morse-code/04-one-dot-too-many-phone.webp",
-    "media/types/morse-code/05-prosigns-phone.webp"
-   ],
-   "summary": {
-    "types": [
-     {
-      "id": "morse",
-      "name": "Morse code",
-      "description": "See a character, tap it out in dots and dashes; checked by script, then the right code blinks back. Handles prosigns and codes up to nine elements.",
-      "grader": "script",
-      "fields": [
-       "letter",
-       "name",
-       "prosign",
-       "code",
-       "mnemonic"
-      ]
-     }
-    ],
-    "items": 5,
-    "samples": [
-     "C",
-     "O",
-     "S"
     ]
    }
   },
@@ -497,51 +733,6 @@
    }
   },
   {
-   "id": "typing-test",
-   "kind": "type",
-   "name": "Type fast",
-   "description": "A Monkeytype-style typing test: common words, your own word list or a passage, by word count or timed. Graded by WPM against a target.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "typing",
-    "speed"
-   ],
-   "version": "2",
-   "updated": "2026-10-28",
-   "path": "entries/types/typing-test.json",
-   "bytes": 35408,
-   "cover": "covers/types/typing-test.webp",
-   "media": [
-    "media/types/typing-test/01-type-the-words-phone.webp",
-    "media/types/typing-test/02-results-phone.webp",
-    "media/types/typing-test/03-timed-phone.webp",
-    "media/types/typing-test/04-passage-phone.webp",
-    "media/types/typing-test/05-word-list-phone.webp"
-   ],
-   "summary": {
-    "types": [
-     {
-      "id": "typing",
-      "name": "Type fast",
-      "description": "A typing test in the style of Monkeytype: common words, your own word list or a passage, by word count or against the clock. The clock starts on the first key and the result is your WPM. Score = WPM ÷ target.",
-      "grader": "script",
-      "fields": [
-       "note",
-       "text",
-       "wordlist",
-       "count",
-       "seconds",
-       "target"
-      ]
-     }
-    ],
-    "items": 1,
-    "samples": [
-     "25 of the most common English words. The clock starts on your first key."
-    ]
-   }
-  },
-  {
    "id": "osaka-jade",
    "kind": "theme",
    "name": "Osaka Jade",
@@ -612,60 +803,6 @@
      },
      "css": "/*\nMIT License\n\nCopyright (c) 2025 Justin Lowry\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n*/"
     }
-   }
-  },
-  {
-   "id": "periodic-table",
-   "kind": "deck",
-   "name": "Periodic table",
-   "description": "All 118 elements, each asked eight ways, one subdeck per way: type the symbol, type the name, tap its cell on a blank table, name a lit-up cell, give its atomic number, period and group, its atomic mass, its family and block, and write its electron configuration. Every answer ends on the element's tile and its place in the coloured table, so the table builds itself in your head as you go. Uses the Element card type, which comes along. Data from PubChem.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "chemistry",
-    "periodic-table",
-    "science"
-   ],
-   "version": "1",
-   "updated": "2026-10-26",
-   "path": "entries/decks/periodic-table.json",
-   "bytes": 804846,
-   "cover": "covers/decks/periodic-table.webp",
-   "media": [
-    "media/decks/periodic-table/01-find-gold-phone.webp",
-    "media/decks/periodic-table/02-name-the-cell-phone.webp",
-    "media/decks/periodic-table/03-symbol-missed-phone.webp",
-    "media/decks/periodic-table/04-family-phone.webp",
-    "media/decks/periodic-table/05-numbers-phone.webp",
-    "media/decks/periodic-table/06-electron-configuration-phone.webp"
-   ],
-   "summary": {
-    "decks": [
-     "Periodic table",
-     "Periodic table::1 Symbols",
-     "Periodic table::2 Names",
-     "Periodic table::3 Find it on the table",
-     "Periodic table::4 Name the cell",
-     "Periodic table::5 Numbers",
-     "Periodic table::6 Atomic mass",
-     "Periodic table::7 Family and block",
-     "Periodic table::8 Electron configuration"
-    ],
-    "items": 944,
-    "cardTypes": {
-     "element": 944
-    },
-    "types": [
-     {
-      "id": "element",
-      "name": "Element"
-     }
-    ],
-    "watch": false,
-    "samples": [
-     "symbol",
-     "Na comes from the Latin natrium.",
-     "K comes from the Latin kalium."
-    ]
    }
   },
   {
@@ -1064,143 +1201,6 @@
       "--font-mono": "\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", monospace"
      }
     }
-   }
-  },
-  {
-   "id": "etude-showcase",
-   "kind": "deck",
-   "name": "Etude Showcase",
-   "description": "A tour of what Etude cards can be: one card for each of 27 card types (chess, chords, kanji drawing, regex, typing tests...). It's a Watch deck: press Show an answer to see each one answered and graded.",
-   "author": "Joao Henrique Costa Araujo",
-   "tags": [
-    "tour",
-    "demo"
-   ],
-   "version": "1",
-   "updated": "2026-10-25",
-   "path": "entries/decks/etude-showcase.json",
-   "bytes": 363792,
-   "cover": "covers/decks/etude-showcase.webp",
-   "media": [
-    "media/decks/etude-showcase/01-chess-phone.webp",
-    "media/decks/etude-showcase/02-chords-phone.webp",
-    "media/decks/etude-showcase/03-balance-phone.webp",
-    "media/decks/etude-showcase/04-regex-phone.webp",
-    "media/decks/etude-showcase/05-graph-walk-phone.webp",
-    "media/decks/etude-showcase/06-color-phone.webp"
-   ],
-   "summary": {
-    "decks": [
-     "Etude Showcase",
-     "Etude Showcase::1 Recall",
-     "Etude Showcase::2 Calculate",
-     "Etude Showcase::3 Arrange",
-     "Etude Showcase::4 Code",
-     "Etude Showcase::5 Play and listen",
-     "Etude Showcase::6 Draw and write"
-    ],
-    "items": 27,
-    "cardTypes": {
-     "basic": 1,
-     "typed": 1,
-     "mcq": 1,
-     "cloze": 1,
-     "match": 1,
-     "numeric": 1,
-     "math": 1,
-     "estimate": 1,
-     "balance": 1,
-     "unit-circle": 1,
-     "plot": 1,
-     "order": 1,
-     "timeline": 1,
-     "graph-walk": 1,
-     "code": 1,
-     "regex": 1,
-     "bug-hunt": 1,
-     "bits": 1,
-     "chess": 1,
-     "chord": 1,
-     "staff": 1,
-     "interval": 1,
-     "color": 1,
-     "sprint": 1,
-     "typing": 1,
-     "free": 1,
-     "draw": 1
-    },
-    "types": [
-     {
-      "id": "balance",
-      "name": "Balance the equation"
-     },
-     {
-      "id": "bits",
-      "name": "Flip the bits"
-     },
-     {
-      "id": "bug-hunt",
-      "name": "Find the bug"
-     },
-     {
-      "id": "chess",
-      "name": "Mate in one"
-     },
-     {
-      "id": "chord",
-      "name": "Build the chord"
-     },
-     {
-      "id": "color",
-      "name": "Make this color"
-     },
-     {
-      "id": "estimate",
-      "name": "Estimate it"
-     },
-     {
-      "id": "graph-walk",
-      "name": "Visit the nodes"
-     },
-     {
-      "id": "interval",
-      "name": "Name the interval"
-     },
-     {
-      "id": "plot",
-      "name": "Mark the points"
-     },
-     {
-      "id": "regex",
-      "name": "Write the regex"
-     },
-     {
-      "id": "sprint",
-      "name": "Beat the clock"
-     },
-     {
-      "id": "staff",
-      "name": "Read the note"
-     },
-     {
-      "id": "timeline",
-      "name": "Place it in time"
-     },
-     {
-      "id": "typing",
-      "name": "Type fast"
-     },
-     {
-      "id": "unit-circle",
-      "name": "Unit circle"
-     }
-    ],
-    "watch": true,
-    "samples": [
-     "Why is the sky blue?",
-     "What is the capital of Australia?",
-     "Which planet has the shortest day, one full turn on its axis?"
-    ]
    }
   },
   {
